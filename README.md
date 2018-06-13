@@ -4,13 +4,13 @@
 
 #### By **Brea Clark**
 
-### Finished Sketch Files
+### Sketch Files
 
-<img width="400" src="">
+<img width="400" src="https://raw.githubusercontent.com/breaclark/dijibu/master/Screen%20Shot%202018-06-13%20at%202.21.04%20PM.png">
 
 ### Inspiration
 
-<img src="">
+<img src="https://raw.githubusercontent.com/breaclark/dijibu/master/memo_2.jpg">
 
 ### Different Pages
 
