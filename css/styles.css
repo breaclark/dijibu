@@ -11,21 +11,55 @@ html, body {
   align-items: center;
   background-color: #F6D1B9;
   display: flex;
-  height: 64px;
+  height: 60px;
   justify-content: space-between;
   width: 100%;
 }
 
 .header h1 {
   color: #092E46;
-  margin-left: 24px;
+  margin-left: 20px;
 }
 
 .header .ham-line {
   background-color: #092E46;
   border-radius: 4px;
-  margin-right: 24px;
+  margin-right: 20px;
   margin-bottom: 4px;
   height: 4px;
   width: 24px;
+}
+
+.page-header {
+  align-items: center;
+  display: flex;
+}
+
+.page-header h1 {
+  margin-left: 20px;
+  color: #DA6257;
+}
+
+.tracker-grid {
+
+}
+
+.multi-tracker {
+
+}
+
+.text-tracker {
+
+}
+
+.count-tracker {
+
+}
+
+.activity-tracker {
+
+}
+
+.boolean-tracker {
+
 }
