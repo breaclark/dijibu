@@ -122,6 +122,7 @@ html, body {
 }
 
 .form label {
+  font-size: 13pt;
   margin-left: 20px;
 }
 
@@ -131,12 +132,12 @@ html, body {
   border-radius: 3px;
   color: #E99259;
   font-size: 13pt;
-  height: 20px;
-  line-height: 20px;
+  height: 26px;
+  line-height: 26px;
   margin-bottom: 10px;
   margin-left: 20px;
   padding-left: 6px;
-  width: 70%;
+  width: 68%;
 }
 
 .form-select {
