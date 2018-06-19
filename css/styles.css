@@ -115,3 +115,43 @@ html, body {
   background-color: #DA6257;
   border-radius: 14px;
 }
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-input {
+  background-color: #F6D1B9;
+  border: 1px solid #092E46;
+  border-radius: 3px;
+  font-size: 13pt;
+  height: 20px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  width: 70%;
+}
+
+input::-webkit-input-placeholder {
+color: #E99259 !important;
+}
+
+input:-moz-placeholder {
+color: #E99259 !important;
+}
+
+input::-moz-placeholder {
+color: #E99259 !important;
+}
+
+input:-ms-input-placeholder {
+color: #E99259 !important;
+}
+
+.form-submit {
+  background-color: #DA6257;
+  border-radius: 3px;
+  font-size: 13pt;
+  margin-left: 20px;
+  width: 70%;
+}
