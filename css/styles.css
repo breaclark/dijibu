@@ -86,6 +86,14 @@ html, body {
   background-color: #E99259;
   grid-column: span 2;
   grid-row: span 3;
+  padding: 40px;
+}
+
+.text-tracker hr {
+  border: 1px solid white;
+  margin-right: 6%;
+  margin-bottom: 30px;
+  margin-left: 6%;
 }
 
 .count-tracker {
@@ -194,7 +202,7 @@ color: #E99259 !important;
   color: #DA6257;
   font-size: 20pt;
   height: 40px;
-  margin-top: 20px;
+  margin-top: 30px;
   width: 20%;
 }
 
