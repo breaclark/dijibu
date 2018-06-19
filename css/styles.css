@@ -114,13 +114,22 @@ html, body {
   margin-left: 40px;
 }
 
-#count-select-box {
+.count-tracker.tracker-tile label{
+  font-size: 10vw;
+}
+
+.count-select-box {
   border: none;
   background-color: inherit;
   color: white;
   font-size: 10vw;
   height: 100px;
-  width: 20%;
+  width: 40%;
+}
+
+.count-tracker.tracker-tile .count-select-box{
+  font-size: 10vw;
+  width: 50%;
 }
 
 .activity-tracker {
@@ -224,6 +233,7 @@ color: #E99259 !important;
   font-size: 20pt;
   height: 40px;
   margin-top: 30px;
+  min-width: 200px;
   width: 20%;
 }
 
