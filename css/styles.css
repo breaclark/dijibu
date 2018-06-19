@@ -183,6 +183,10 @@ color: #E99259 !important;
   min-width: 330px;
 }
 
+.day-marker {
+  text-align: center;
+}
+
 .day-tile {
   background-color: #D8D8D8;
   border-radius: 3px;
