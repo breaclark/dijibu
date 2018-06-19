@@ -135,17 +135,23 @@ html, body {
   line-height: 20px;
   margin-bottom: 10px;
   margin-left: 20px;
+  padding-left: 6px;
   width: 70%;
 }
 
 .form-select {
   background-color: #F6D1B9;
   border: 1px solid #092E46;
-  border-radius: 3px;
   color: #E99259;
+  font-size: 13pt;
   margin-bottom: 10px;
   margin-left: 20px;
   width: 70%;
+}
+
+#select-box {
+  height: 26px;
+  width: 70.5%;
 }
 
 input::-webkit-input-placeholder {
@@ -164,12 +170,22 @@ input:-ms-input-placeholder {
 color: #E99259 !important;
 }
 
+.option-add {
+  background-color: #DA6257;
+  border-radius: 14px;
+  color: white;
+  position: absolute;
+  top: 278px;
+  right: 16%;
+  width: 21px;
+}
+
 .form-submit {
   background-color: #DA6257;
   border-radius: 3px;
   font-size: 13pt;
   margin-left: 20px;
-  width: 70%;
+  width: 70.5%;
 }
 
 .calendar-grid {
