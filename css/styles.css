@@ -189,6 +189,15 @@ color: #E99259 !important;
   width: 70.5%;
 }
 
+#month-select-box {
+  border: none;
+  color: #DA6257;
+  font-size: 20pt;
+  height: 40px;
+  margin-top: 20px;
+  width: 20%;
+}
+
 .calendar-grid {
   color: #DA6257;
   display: grid;
