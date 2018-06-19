@@ -179,8 +179,15 @@ html, body {
   padding: 40px;
 }
 
+.boolean-tracker.tracker-big {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 60px;
+}
+
 .star {
-  background-color: red;
+  background: #DA6257;
   height: 20vw;
   position: relative;
   text-align: center;
@@ -195,7 +202,7 @@ html, body {
 }
 
 .star:before, .star:after {
-  background: red;
+  background: #DA6257;
   content: "";
   height: 20vw;
   left: 0;
@@ -205,12 +212,7 @@ html, body {
 }
 
 .tracker-tile .star:before, .tracker-tile .star:after {
-  background: red;
-  content: "";
   height: 40px;
-  left: 0;
-  position: absolute;
-  top: 0;
   width: 40px;
 
 }
