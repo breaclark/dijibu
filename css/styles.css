@@ -67,6 +67,11 @@ html, body {
   }
 }
 
+.tracker-big {
+  border-radius: 3px;
+  margin: 20px;
+}
+
 .tracker-tile {
   border-radius: 3px;
   position: relative;
@@ -97,9 +102,25 @@ html, body {
 }
 
 .count-tracker {
+  color: white;
   background-color: #092E46;
   grid-column: span 2;
   grid-row: span 2;
+  min-height: 100px;
+}
+
+.count-tracker label {
+  font-size: 10vw;
+  margin-left: 40px;
+}
+
+#count-select-box {
+  border: none;
+  background-color: inherit;
+  color: white;
+  font-size: 10vw;
+  height: 100px;
+  width: 20%;
 }
 
 .activity-tracker {
