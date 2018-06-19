@@ -145,6 +145,28 @@ html, body {
   grid-row: span 1;
 }
 
+.activity-block {
+  display: flex;
+  align-items: center;
+  margin-bottom: -15px;
+}
+
+.hour-tile h3{
+  background-color: #092E46;
+  border-radius: 3px;
+  color: white;
+  height: 30px;
+  margin-left: 20px;
+  text-align: center;
+  width: 30px;
+}
+
+.activity-select .form-select {
+  background-color: #DA6257;
+  border: none;
+  color: white;
+}
+
 .boolean-tracker {
   background-color: #D7D7D7;
   grid-column: span 1;
