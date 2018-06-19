@@ -130,7 +130,7 @@ html, body {
   background-color: inherit;
   color: white;
   font-size: 20vw;
-  height: 100px;
+  min-height: 100px;
   width: 40%;
 }
 
