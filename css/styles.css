@@ -176,6 +176,56 @@ html, body {
   background-color: #D7D7D7;
   grid-column: span 1;
   grid-row: span 1;
+  padding: 40px;
+}
+
+.star {
+  background-color: red;
+  height: 20vw;
+  position: relative;
+  text-align: center;
+  width: 20vw;
+}
+
+.tracker-tile .star {
+  height: 40px;
+  width: 40px;
+  right: 20px;
+  bottom: 20px;
+}
+
+.star:before, .star:after {
+  background: red;
+  content: "";
+  height: 20vw;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 20vw;
+}
+
+.tracker-tile .star:before, .tracker-tile .star:after {
+  background: red;
+  content: "";
+  height: 40px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 40px;
+
+}
+
+.star:before {
+    -webkit-transform: rotate(30deg);
+       -moz-transform: rotate(30deg);
+        -ms-transform: rotate(30deg);
+         -o-transform: rotate(30deg);
+}
+.star:after {
+    -webkit-transform: rotate(60deg);
+       -moz-transform: rotate(60deg);
+        -ms-transform: rotate(60deg);
+         -o-transform: rotate(60deg);
 }
 
 .x {
