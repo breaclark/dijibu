@@ -145,6 +145,11 @@ html, body {
   grid-row: span 1;
 }
 
+.activity-tracker.tracker-tile {
+  align-items: center;
+  display: flex;
+}
+
 .activity-block {
   display: flex;
   align-items: center;
