@@ -1,5 +1,5 @@
 // Chart 5
-// This might be better as a very thin donut chart. So if you did well, unbroken line
+// Plotly
 
 let data5 = [{
   values: [14.285, 14.285, 14.285, 14.285, 14.285, 14.285, 14.285],
@@ -14,8 +14,14 @@ let data5 = [{
 }];
 
 let layout5 = {
-  height: 400,
-  width: 500,
+  height: 250,
+  width: 300,
+  margin: {
+    l: 20,
+    r: 20,
+    b: 20,
+    t: 20
+  },
   showlegend: false
 };
 

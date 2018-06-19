@@ -347,3 +347,9 @@ color: #E99259 !important;
   min-width: 15px;
   padding-top: 70%;
 }
+
+.charts {
+  position: absolute;
+  left: 20px;
+  top: 140px;
+}
