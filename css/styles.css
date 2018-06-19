@@ -121,12 +121,28 @@ html, body {
   flex-direction: column;
 }
 
+.form label {
+  margin-left: 20px;
+}
+
 .form-input {
   background-color: #F6D1B9;
   border: 1px solid #092E46;
   border-radius: 3px;
+  color: #E99259;
   font-size: 13pt;
   height: 20px;
+  line-height: 20px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  width: 70%;
+}
+
+.form-select {
+  background-color: #F6D1B9;
+  border: 1px solid #092E46;
+  border-radius: 3px;
+  color: #E99259;
   margin-bottom: 10px;
   margin-left: 20px;
   width: 70%;

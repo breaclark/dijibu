@@ -23,7 +23,14 @@
       <h1>New Tracker</h1>
     </div>
     <div class="form">
-      <input class="form-input" type="text" name="type" placeholder="Tracker Type">
+      <label>Tracker Type</label>
+      <select class="form-select">
+        <option class="form-select" value="multiplechoice">Multiple Choice</option>
+        <option class="form-select" value="text">Text</option>
+        <option class="form-select" value="activity">Activity</option>
+        <option class="form-select" value="boolean">Boolean</option>
+        <option class="form-select" value="doodle">Doodle</option>
+      </select>
       <input class="form-input" type="text" name="title" placeholder="Tracker Title">
       <input class="form-input" type="text" name="units" placeholder="Units (only for counter)">
       <input class="form-input" type="text" name="option" placeholder="Option (for multi-choice and activity)">
