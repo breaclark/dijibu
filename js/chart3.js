@@ -1,6 +1,5 @@
 // Chart 3
 // Chart 3 is plotly using d3 radar chart
-// See if you can make it more minimal but just as informative
 
 data3 = [{
   type: "scatterpolar",
@@ -19,8 +18,23 @@ layout3 = {
     radialaxis: {
       color: "#DA6257",
       visible: true,
-      angle: 90
+      angle: 90,
+      linecolor: "#D7D7D7",
+      gridcolor: "#D7D7D7",
+      nticks: 3,
+      tickangle: 90
+    },
+    angularaxis: {
+      color: "#D7D7D7"
     }
+  },
+  height: 250,
+  width: 320,
+  margin: {
+    l: 20,
+    r: 20,
+    b: 20,
+    t: 20
   },
   showlegend: false
 }
