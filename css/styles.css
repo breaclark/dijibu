@@ -52,37 +52,66 @@ html, body {
   min-width: 330px;
 }
 
+@keyframes shake {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  30% {
+    transform: rotateZ(1deg);
+  }
+  60% {
+    transform: rotateZ(-1deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
+
+.tracker-tile {
+  border-radius: 3px;
+  position: relative;
+}
+
+.tracker-tile:hover {
+  animation: shake 0.25s linear infinite;
+}
+
 .multi-tracker {
   background-color: #738678;
-  border-radius: 3px;
   grid-column: span 2;
   grid-row: span 1;
 }
 
 .text-tracker {
   background-color: #E99259;
-  border-radius: 3px;
   grid-column: span 2;
   grid-row: span 3;
 }
 
 .count-tracker {
   background-color: #092E46;
-  border-radius: 3px;
   grid-column: span 2;
   grid-row: span 2;
 }
 
 .activity-tracker {
   background-color: #DA6257;
-  border-radius: 3px;
   grid-column: span 4;
   grid-row: span 1;
 }
 
 .boolean-tracker {
   background-color: #D7D7D7;
-  border-radius: 3px;
   grid-column: span 1;
   grid-row: span 1;
+}
+
+.x {
+  position: absolute;
+  top: -10px;
+  padding-left: 7px;
+  padding-right: 7px;
+  right: -10px;
+  background-color: #DA6257;
+  border-radius: 14px;
 }
