@@ -171,3 +171,22 @@ color: #E99259 !important;
   margin-left: 20px;
   width: 70%;
 }
+
+.calendar-grid {
+  color: #DA6257;
+  display: grid;
+  grid-auto-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  min-width: 330px;
+}
+
+.day-tile {
+  background-color: #D8D8D8;
+  border-radius: 3px;
+  min-height: 15px;
+  min-width: 15px;
+  padding-top: 70%;
+}
