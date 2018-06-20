@@ -204,7 +204,7 @@ a {
   grid-row: span 1;
 }
 
-.activity-tracker.tracker-tile {
+.activity-tracker.tracker-tile a {
   align-items: center;
   display: flex;
 }
