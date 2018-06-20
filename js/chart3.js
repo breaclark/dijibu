@@ -25,7 +25,8 @@ layout3 = {
       tickangle: 90
     },
     angularaxis: {
-      color: "#D7D7D7"
+      color: "#D7D7D7",
+      direction: "clockwise"
     }
   },
   height: 250,

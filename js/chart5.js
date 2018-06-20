@@ -3,7 +3,7 @@
 
 let data5 = [{
   values: [14.285, 14.285, 14.285, 14.285, 14.285, 14.285, 14.285],
-  labels: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+  labels: ["Sunday", "Saturday", "Friday", "Thursday", "Wednesday", "Tuesday", "Monday"],
   type: "pie",
   marker: {
     colors: ["#F6D1B9", "#FFFFFF", "#F6D1B9", "#F6D1B9", "#F6D1B9", "#FFFFFF", "#F6D1B9"]
