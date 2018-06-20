@@ -1,4 +1,5 @@
 * {
+  color: #DA6257;
   font-family: 'Nunito', sans-serif;
 }
 
@@ -355,6 +356,7 @@ color: #E99259 !important;
   border-radius: 3px;
   font-size: 13pt;
   margin-left: 20px;
+  margin-bottom: 10px;
   width: 70.5%;
 }
 
@@ -397,4 +399,31 @@ color: #E99259 !important;
   position: absolute;
   left: 20px;
   top: 140px;
+}
+
+.history-grid {
+  display: grid;
+  grid-auto-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  min-width: 330px;
+}
+
+.tracker-history-tile {
+  height: 45vw;
+  min-height: 180px;
+  position: relative;
+}
+
+.tracker-history-tile img {
+  width: 100%;
+}
+
+.tracker-history-tile h3 {
+  bottom: 10px;
+  font-size: 5vw;
+  left: 10px;
+  position: absolute;
 }
