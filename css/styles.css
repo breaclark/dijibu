@@ -193,6 +193,10 @@ a {
   width: 40%;
 }
 
+.count-tracker.tracker-tile a .count-select-box{
+  width: 100%;
+}
+
 .count-tracker.tracker-tile .count-select-box{
   font-size: 350%;
   width: 60%;
@@ -202,6 +206,11 @@ a {
   background-color: #DA6257;
   grid-column: span 4;
   grid-row: span 1;
+}
+
+.activity-tracker.tracker-tile {
+  align-items: center;
+  display: flex;
 }
 
 .activity-tracker.tracker-tile a {
@@ -290,13 +299,14 @@ a {
 }
 
 .x {
-  position: absolute;
-  top: -10px;
-  padding-left: 7px;
-  padding-right: 7px;
-  right: -10px;
   background-color: #DA6257;
   border-radius: 14px;
+  color: white;
+  padding-left: 7px;
+  padding-right: 7px;
+  position: absolute;
+  right: -10px;
+  top: -10px;
 }
 
 .form {
@@ -371,6 +381,10 @@ color: #E99259 !important;
   margin-left: 20px;
   margin-bottom: 10px;
   width: 70.5%;
+}
+
+.form-submit a {
+  color: white;
 }
 
 #month-select-box {
