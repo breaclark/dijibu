@@ -20,13 +20,14 @@ a {
   align-items: center;
   background-color: #F6D1B9;
   display: flex;
-  height: 60px;
+  height: 140px;
   justify-content: space-between;
   width: 100%;
 }
 
 .header h1 {
   color: #092E46;
+  font-size: 6vw;
   margin-left: 20px;
 }
 
@@ -35,8 +36,8 @@ a {
   border-radius: 4px;
   margin-right: 20px;
   margin-bottom: 4px;
-  height: 4px;
-  width: 24px;
+  height: 8px;
+  width: 56px;
 }
 
 .hamburger {
@@ -44,7 +45,7 @@ a {
   overflow: hidden;
   position: absolute;
   right: 10px;
-  top: 20px;
+  top: 54px;
 }
 
 @keyframes menu-slide-in {
@@ -52,7 +53,7 @@ a {
     top: -140px;
   }
   100% {
-    top: 50px;
+    top: 110px;
   }
 }
 
@@ -68,10 +69,10 @@ a {
 
 .menu-back {
   background-color: #F6D1B9;
-  height: 148px;
+  height: 240px;
   left: 0px;
   position: fixed;
-  top: -140px;
+  top: -240px;
   width: 100%;
   z-index: 2;
 }
@@ -79,6 +80,7 @@ a {
 .menu a{
   color: #3E3E3E;
   display: block;
+  font-size: 20pt;
   text-align: right;
   text-decoration: none;
   margin: 5px;
@@ -91,8 +93,9 @@ a {
 }
 
 .page-header h1 {
-  margin-left: 20px;
   color: #DA6257;
+  font-size: 8vw;
+  margin-left: 20px;
 }
 
 .tracker-grid {
