@@ -42,6 +42,9 @@
 ## Technologies Used
 
 * Sketch
+* Javascript
+* HTML
+* CSS
 
 ## Support and contact details
 
