@@ -12,6 +12,19 @@
 
 <img src="https://raw.githubusercontent.com/breaclark/dijibu/master/memo_2.jpg">
 
+### Screenshots
+
+<p>
+<img src="" width="">
+<img src="" width="">
+<img src="" width="">
+</p>
+
+<p>
+<img src="" width="">
+<img src="" width="">
+</p>
+
 ### Different Pages
 
 * Daily View with all trackers
