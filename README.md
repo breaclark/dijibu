@@ -10,7 +10,10 @@
 
 ### Inspiration
 
-<img src="https://raw.githubusercontent.com/breaclark/dijibu/master/memo_2.jpg">
+<p>
+<img src="https://raw.githubusercontent.com/breaclark/dijibu/master/memo_2.jpg" width="400">
+<img src="https://raw.githubusercontent.com/breaclark/dijibu/master/il_570xN.1367546940_m62m.jpg" width="400">
+</p>
 
 ### Screenshots
 
