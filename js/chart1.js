@@ -13,8 +13,8 @@ let data = [{
 }];
 
 let layout = {
-  height: 250,
-  width: 300,
+  height: 500,
+  width: 600,
   margin: {
     l: 20,
     r: 20,

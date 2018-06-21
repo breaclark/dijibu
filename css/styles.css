@@ -256,7 +256,7 @@ a {
   align-items: center;
   display: flex;
   justify-content: center;
-  padding: 60px;
+  padding: 140px;
 }
 
 .star {
@@ -428,9 +428,7 @@ color: #E99259 !important;
 }
 
 .charts {
-  position: absolute;
-  left: 20px;
-  top: 140px;
+  margin-left: 20px;
 }
 
 .history-grid {

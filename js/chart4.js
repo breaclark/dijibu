@@ -15,6 +15,6 @@ d3.select('#chart4')
     .data([data4])
     .enter()
     .append('svg')
-    .attr("width", 400)
+    .attr("width", 600)
     .attr("height", 600)
     .call(chart);

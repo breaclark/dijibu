@@ -14,8 +14,8 @@ let data5 = [{
 }];
 
 let layout5 = {
-  height: 250,
-  width: 300,
+  height: 550,
+  width: 600,
   margin: {
     l: 20,
     r: 20,

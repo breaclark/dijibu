@@ -29,11 +29,11 @@ layout3 = {
       direction: "clockwise"
     }
   },
-  height: 250,
-  width: 320,
+  height: 550,
+  width: 520,
   margin: {
-    l: 20,
-    r: 20,
+    l: 60,
+    r: 40,
     b: 20,
     t: 20
   },

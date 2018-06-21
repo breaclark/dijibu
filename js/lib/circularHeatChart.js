@@ -2,7 +2,7 @@ function circularHeatChart() {
     var margin = {top: 20, right: 20, bottom: 20, left: 20},
     innerRadius = 50,
     numSegments = 24,
-    segmentHeight = 14,
+    segmentHeight = 30,
     domain = null,
     range = ["white", "red"],
     accessor = function(d) {return d;},
