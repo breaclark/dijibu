@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function NewTracker() {
     return (
@@ -76,7 +77,7 @@ function NewTracker() {
         <input className="form-input" type="text" name="units" placeholder="Units (only for counter)" />
         <input className="form-input" type="text" name="option" placeholder="Option (for multi-choice and activity)" />
         <button className="option-add">+</button>
-        <button className="form-submit"><a href="index.html">Create New Tracker</a></button>
+        <button className="form-submit"><Link className="link" to="/">Create New Tracker</Link></button>
       </div>
     </div>
     );
