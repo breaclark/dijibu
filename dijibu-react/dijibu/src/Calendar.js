@@ -10,34 +10,6 @@ class Calendar extends React.Component {
     return months[monthNum];
   }
 
-  renderWeekDays() {
-    return(
-      <div>
-        <div className="day-marker">
-          S
-        </div>
-        <div className="day-marker">
-          M
-        </div>
-        <div className="day-marker">
-          T
-        </div>
-        <div className="day-marker">
-          W
-        </div>
-        <div className="day-marker">
-          TH
-        </div>
-        <div className="day-marker">
-          F
-        </div>
-        <div className="day-marker">
-          S
-        </div>
-      </div>
-    )
-  }
-
   renderSingleDay(dayNum) {
     return(
       <Day date={dayNum} />
@@ -64,7 +36,7 @@ class Calendar extends React.Component {
           .calendar-grid {
             color: #DA6257;
             display: grid;
-            grid-auto-rows: 1fr;
+            grid-auto-rows: 4em;
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
             grid-gap: 10px;
             margin-left: 20px;
@@ -75,12 +47,33 @@ class Calendar extends React.Component {
           .day-marker {
             display: inline;
             font-size: 5vw;
+            margin-bottom: 0px;
             text-align: center;
           }
         `}</style>
         <h1>{this.currentMonth()}</h1>
         <div className="calendar-grid">
-          {this.renderWeekDays()}
+          <div className="day-marker">
+            S
+          </div>
+          <div className="day-marker">
+            M
+          </div>
+          <div className="day-marker">
+            T
+          </div>
+          <div className="day-marker">
+            W
+          </div>
+          <div className="day-marker">
+            TH
+          </div>
+          <div className="day-marker">
+            F
+          </div>
+          <div className="day-marker">
+            S
+          </div>
           {this.renderDays()}
         </div>
       </div>
