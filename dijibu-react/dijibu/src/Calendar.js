@@ -4,6 +4,12 @@ import dateFns from "date-fns";
 
 class Calendar extends React.Component {
 
+  currentMonth() {
+    let monthNum =  dateFns.getMonth(new Date());
+    let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    return months[monthNum];
+  }
+
   renderWeekDays() {
     return(
       <div className="calendar-grid">
@@ -33,7 +39,12 @@ class Calendar extends React.Component {
   }
 
   renderDays(){
-    let result = dateFns.getDay(new Date());
+    // for each month, getDaysInMonth
+    // put the first day at the correct weekday, getDay()
+    // continue to make days as necessary
+    // default to current month, have arrows for other months
+
+
   }
 
   render() {
@@ -57,7 +68,7 @@ class Calendar extends React.Component {
             text-align: center;
           }
         `}</style>
-        <h1>June</h1>
+        <h1>{this.currentMonth()}</h1>
         {this.renderWeekDays()}
         <Day />
         <Day />
