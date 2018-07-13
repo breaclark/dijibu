@@ -5,6 +5,8 @@ import Header from './Header';
 import SignIn from './SignIn';
 import TrackersMain from './TrackersMain';
 import Calendar from './Calendar';
+import HistoriesMain from './HistoriesMain';
+import EditTrackers from './EditTrackers';
 
 class App extends Component {
   render() {
@@ -14,6 +16,8 @@ class App extends Component {
         <SignIn />
         <TrackersMain />
         <Calendar />
+        <HistoriesMain />
+        <EditTrackers />
       </div>
     );
   }
