@@ -4,7 +4,7 @@ import History from './History';
 function HistoriesMain() {
     return (
       <div>
-        <h1>Histories</h1>
+        <h1>Tracker Histories</h1>
         <History />
         <History />
         <History />
