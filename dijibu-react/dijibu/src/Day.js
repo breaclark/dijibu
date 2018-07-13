@@ -1,9 +1,9 @@
 import React from 'react';
 
-function Day() {
+function Day(props) {
     return (
       <div>
-        <h1>Day</h1>
+        <h1>{props.date}</h1>
       </div>
     );
 }

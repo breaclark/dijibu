@@ -12,7 +12,7 @@ class Calendar extends React.Component {
 
   renderWeekDays() {
     return(
-      <div className="calendar-grid">
+      <div>
         <div className="day-marker">
           S
         </div>
@@ -38,12 +38,22 @@ class Calendar extends React.Component {
     )
   }
 
-  renderDays(){
-    // for each month, getDaysInMonth
-    // put the first day at the correct weekday, getDay()
-    // continue to make days as necessary
-    // default to current month, have arrows for other months
+  renderSingleDay(dayNum) {
+    return(
+      <Day date={dayNum} />
+    );
+  }
 
+  renderDays(){
+    let firstWeekDay = dateFns.getDay(dateFns.startOfMonth(new Date()));
+    let monthDays = [];
+    for(let i=0; i< firstWeekDay-1; i++) {
+      monthDays.push(this.renderSingleDay(""));
+    }
+    for(let i=1; i<= dateFns.getDaysInMonth(new Date()); i++) {
+      monthDays.push(this.renderSingleDay(String(i)));
+    }
+    return monthDays;
 
   }
 
@@ -69,11 +79,10 @@ class Calendar extends React.Component {
           }
         `}</style>
         <h1>{this.currentMonth()}</h1>
-        {this.renderWeekDays()}
-        <Day />
-        <Day />
-        <Day />
-        <Day />
+        <div className="calendar-grid">
+          {this.renderWeekDays()}
+          {this.renderDays()}
+        </div>
       </div>
     );
   }
