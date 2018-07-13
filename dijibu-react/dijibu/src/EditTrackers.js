@@ -1,6 +1,4 @@
 import React from 'react';
-import NewTracker from './NewTracker';
-import DeleteTracker from './DeleteTracker';
 import { Link } from 'react-router-dom';
 
 function EditTrackers() {

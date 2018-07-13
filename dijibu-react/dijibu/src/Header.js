@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 function Header() {
     return (
       <div className="header">
-        <style jsx>{`
+        <style>{`
           .header {
             align-items: center;
             background-color: #F6D1B9;

@@ -38,6 +38,10 @@
 * All tracker history
 * Single tracker history
 
+### React Component Structure
+
+<img src="https://raw.githubusercontent.com/breaclark/dijibu/master/React_Component_Structure.jpg">
+
 
 ## Known Bugs
 * No known bugs.

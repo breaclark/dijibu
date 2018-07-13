@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 function NewTracker() {
     return (
     <div>
-      <style jsx>{`
+      <style>{`
         .form {
           display: flex;
           flex-direction: column;
