@@ -17,7 +17,7 @@ class App extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-
+      date: new Date()
     };
   }
 
@@ -27,8 +27,8 @@ class App extends React.Component {
         <Header />
         <Switch>
           <Route exact path='/signIn' render={()=><SignIn />}/>
-          <Route exact path='/' render={()=><TrackersMain />}/>
-          <Route path='/calendar' render={()=><Calendar /> }/>
+          <Route exact path='/' render={()=><TrackersMain date={this.state.date}/>}/>
+          <Route path='/calendar' render={()=><Calendar date={this.state.date}/> }/>
           <Route path='/histories' render={()=><HistoriesMain /> }/>
           <Route path='/edit' render={()=><EditTrackers /> }/>
           <Route path='/new' render={()=><NewTracker /> }/>

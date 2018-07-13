@@ -1,10 +1,11 @@
 import React from 'react';
 import Tracker from './Tracker';
+import dateFns from "date-fns";
 
-function TrackerMain() {
+function TrackerMain(props) {
     return (
       <div>
-        <h1>June 6, 2018</h1>
+        <h1>{dateFns.format(props.date, 'MMMM D, YYYY')}</h1>
         <Tracker />
         <Tracker />
         <Tracker />

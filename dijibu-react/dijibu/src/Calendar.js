@@ -6,7 +6,7 @@ class Calendar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      date: new Date()
+      date: props.date
     }
     this.currentMonth = this.currentMonth.bind(this);
     this.renderSingleDay = this.renderSingleDay.bind(this);
@@ -116,7 +116,6 @@ class Calendar extends React.Component {
       </div>
     );
   }
-
 }
 
 export default Calendar;
