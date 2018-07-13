@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Day from './Day';
 import dateFns from "date-fns";
 

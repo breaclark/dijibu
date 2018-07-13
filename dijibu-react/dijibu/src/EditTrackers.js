@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 function EditTrackers() {
     return (
       <div className="edit-trackers">
-        <style jsx>{`
+        <style>{`
           .edit-trackers button {
             background-color: #DA6257;
             border-radius: 3px;
