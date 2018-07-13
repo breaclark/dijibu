@@ -3,11 +3,21 @@ import Day from './Day';
 import dateFns from "date-fns";
 
 class Calendar extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      date: new Date()
+    }
+    this.currentMonth = this.currentMonth.bind(this);
+    this.renderSingleDay = this.renderSingleDay.bind(this);
+    this.renderDays = this.renderDays.bind(this);
+    this.previousMonth = this.previousMonth.bind(this);
+    this.nextMonth = this.nextMonth.bind(this);
+  }
 
   currentMonth() {
-    let monthNum =  dateFns.getMonth(new Date());
     let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-    return months[monthNum];
+    return months[dateFns.getMonth(this.state.date)];
   }
 
   renderSingleDay(dayNum) {
@@ -17,26 +27,50 @@ class Calendar extends React.Component {
   }
 
   renderDays(){
-    let firstWeekDay = dateFns.getDay(dateFns.startOfMonth(new Date()));
+    let firstWeekDay = dateFns.getDay(dateFns.startOfMonth(this.state.date));
     let monthDays = [];
-    for(let i=0; i< firstWeekDay-1; i++) {
+    for(let i=0; i< firstWeekDay; i++) {
       monthDays.push(this.renderSingleDay(""));
     }
-    for(let i=1; i<= dateFns.getDaysInMonth(new Date()); i++) {
+    for(let i=1; i<= dateFns.getDaysInMonth(this.state.date); i++) {
       monthDays.push(this.renderSingleDay(String(i)));
     }
     return monthDays;
 
   }
 
+  previousMonth(){
+    this.setState({
+      date: dateFns.subMonths(dateFns.startOfMonth(this.state.date), 1)
+    });
+  }
+
+  nextMonth() {
+    this.setState({
+      date: dateFns.addMonths(dateFns.startOfMonth(this.state.date), 1)
+    });
+  }
+
   render() {
     return (
       <div>
         <style>{`
+          .calendar-header {
+            align-items: center;
+            display: flex;
+            justify-content: space-around;
+          }
+
+          .month-forward, .month-back {
+            color: #DA6257;
+            display: inline;
+            font-size: 8vw;
+          }
+
           .calendar-grid {
             color: #DA6257;
             display: grid;
-            grid-auto-rows: 4em;
+            grid-auto-rows: 5em;
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
             grid-gap: 10px;
             margin-left: 20px;
@@ -46,12 +80,15 @@ class Calendar extends React.Component {
 
           .day-marker {
             display: inline;
-            font-size: 5vw;
-            margin-bottom: 0px;
+            font-size: 8vw;
             text-align: center;
           }
         `}</style>
-        <h1>{this.currentMonth()}</h1>
+        <div className="calendar-header">
+          <div onClick={this.previousMonth} className="month-back">&#8678;</div>
+          <h1>{this.currentMonth()}</h1>
+          <div onClick={this.nextMonth} className="month-forward">&#8680;</div>
+        </div>
         <div className="calendar-grid">
           <div className="day-marker">
             S
@@ -81,6 +118,5 @@ class Calendar extends React.Component {
   }
 
 }
-//https://blog.flowandform.agency/create-a-custom-calendar-in-react-3df1bfd0b728
 
 export default Calendar;
