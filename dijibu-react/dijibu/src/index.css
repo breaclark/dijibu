@@ -15,3 +15,9 @@ button {
 a {
   text-decoration: none;
 }
+
+h1 {
+  color: #DA6257;
+  font-size: 8vw;
+  margin-left: 20px;
+}

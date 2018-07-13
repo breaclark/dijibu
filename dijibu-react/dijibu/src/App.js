@@ -7,6 +7,8 @@ import TrackersMain from './TrackersMain';
 import Calendar from './Calendar';
 import HistoriesMain from './HistoriesMain';
 import EditTrackers from './EditTrackers';
+import NewTracker from './NewTracker';
+import DeleteTracker from './DeleteTracker';
 import Error404 from './Error404';
 import { Switch, Route } from 'react-router-dom';
 
@@ -21,6 +23,8 @@ class App extends React.Component {
           <Route path='/calendar' render={()=><Calendar /> }/>
           <Route path='/histories' render={()=><HistoriesMain /> }/>
           <Route path='/edit' render={()=><EditTrackers /> }/>
+          <Route path='/new' render={()=><NewTracker /> }/>
+          <Route path='/delete' render={()=><DeleteTracker /> }/>
           <Route component={Error404} />
         </Switch>
       </div>
