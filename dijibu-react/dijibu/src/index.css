@@ -1,5 +1,17 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+* {
+  color: #DA6257;
+  font-family: 'Nunito', sans-serif;
+}
+
+html, body {
+  margin: 0px;
+  padding: 0px;
+}
+
+button {
+  color: white;
+}
+
+a {
+  text-decoration: none;
 }
