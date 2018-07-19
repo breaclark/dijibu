@@ -6,6 +6,7 @@
     "date-fns": "^1.29.0",
     "plotly.js": "^1.39.2",
     "react": "^16.4.1",
+    "react-d3-cloud": "^0.6.0",
     "react-dom": "^16.4.1",
     "react-hot-loader": "^4.3.3",
     "react-plotly.js": "^2.2.0",
