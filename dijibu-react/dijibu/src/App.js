@@ -16,7 +16,26 @@ class App extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      date: new Date()
+      date: new Date(),
+      dataValues: {
+        values: [14.3, 14.3, 14.3, 14.3, 14.3, 14.3, 14.3],
+        labels: ["Happy", "Sad", "Anxious", "Sad", "Productive", "Sad", "Happy"],
+        type: 'pie',
+        marker: {
+          colors: ["#F6D1B9", "#092E46", "#D7D7D7", "#092E46", "#738678", "#092E46", "#F6D1B9"]
+        },
+        sort: false,
+        textinfo: 'none'
+      },
+      layoutValues: {
+        height: 500,
+        width: 600,
+        margin: {
+          l: 20,
+          r: 20,
+          b: 20,
+          t: 20}
+      }
     };
   }
 
@@ -28,7 +47,8 @@ class App extends React.Component {
           <Route exact path='/signIn' render={()=><SignIn />}/>
           <Route exact path='/' render={()=><TrackersMain date={this.state.date}/>}/>
           <Route path='/calendar' render={()=><Calendar date={this.state.date}/> }/>
-          <Route path='/histories' render={()=><HistoriesMain /> }/>
+          <Route path='/histories' render={()=><HistoriesMain dataValues={this.state.dataValues}
+          layoutValues={this.state.layoutValues} /> }/>
           <Route path='/edit' render={()=><EditTrackers /> }/>
           <Route path='/new' render={()=><NewTracker /> }/>
           <Route path='/delete' render={()=><DeleteTracker /> }/>
