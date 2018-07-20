@@ -151,6 +151,9 @@ class App extends React.Component {
     };
   }
 
+// Once data is in firebase, will need to translate into charts here
+
+
   render() {
     return (
       <div className="App">

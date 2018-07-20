@@ -1,0 +1,146 @@
+{ "users": [
+  {
+    "name": "BreaClark",
+    "password": "password",
+    "dates": [
+      { "date": "something", "trackers": [
+        { "name" : "Mood",
+          "type" : "pie",
+          "value" : "Happy"
+        },
+        { "name" : "Purchase",
+          "type" : "wordcloud",
+          "value" : ["milk", "orange juice", "bread"]
+        },
+        { "name" : "Activity",
+          "type" : "heat",
+          "value" : ["Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Cooking", "Driving", "Working", "Working", "Working", "Working", "Working", "Working", "Working", "Working", "Driving", "Cooking", "Watching TV", "Watching TV", "Exercising", "Reading"]
+        },
+        { "name" : "Exercise",
+          "type" : "boolean",
+          "value" : true
+        },
+        { "name" : "Money Spent",
+          "type" : "count",
+          "value" : 33
+        }
+        ]
+      },
+      { "date": "something", "trackers": [
+        { "name" : "Mood",
+          "type" : "pie",
+          "value" : "Happy"
+        },
+        { "name" : "Purchase",
+          "type" : "wordcloud",
+          "value" : ["milk", "orange juice", "bread"]
+        },
+        { "name" : "Activity",
+          "type" : "heat",
+          "value" : ["Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Cooking", "Driving", "Working", "Working", "Working", "Working", "Working", "Working", "Working", "Working", "Driving", "Cooking", "Watching TV", "Watching TV", "Exercising", "Reading"]
+        },
+        { "name" : "Exercise",
+          "type" : "boolean",
+          "value" : true
+        },
+        { "name" : "Money Spent",
+          "type" : "count",
+          "value" : 33
+        }
+        ]
+      },
+      { "date": "something", "trackers": [
+        { "name" : "Mood",
+          "type" : "pie",
+          "value" : "Happy"
+        },
+        { "name" : "Purchase",
+          "type" : "wordcloud",
+          "value" : ["milk", "orange juice", "bread"]
+        },
+        { "name" : "Activity",
+          "type" : "heat",
+          "value" : ["Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Cooking", "Driving", "Working", "Working", "Working", "Working", "Working", "Working", "Working", "Working", "Driving", "Cooking", "Watching TV", "Watching TV", "Exercising", "Reading"]
+        },
+        { "name" : "Exercise",
+          "type" : "boolean",
+          "value" : true
+        },
+        { "name" : "Money Spent",
+          "type" : "count",
+          "value" : 33
+        }
+        ]
+      },
+      { "date": "something", "trackers": [
+        { "name" : "Mood",
+          "type" : "pie",
+          "value" : "Happy"
+        },
+        { "name" : "Purchase",
+          "type" : "wordcloud",
+          "value" : ["milk", "orange juice", "bread"]
+        },
+        { "name" : "Activity",
+          "type" : "heat",
+          "value" : ["Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Cooking", "Driving", "Working", "Working", "Working", "Working", "Working", "Working", "Working", "Working", "Driving", "Cooking", "Watching TV", "Watching TV", "Exercising", "Reading"]
+        },
+        { "name" : "Exercise",
+          "type" : "boolean",
+          "value" : true
+        },
+        { "name" : "Money Spent",
+          "type" : "count",
+          "value" : 33
+        }
+        ]
+      },
+      { "date": "something", "trackers": [
+        { "name" : "Mood",
+          "type" : "pie",
+          "value" : "Happy"
+        },
+        { "name" : "Purchase",
+          "type" : "wordcloud",
+          "value" : ["milk", "orange juice", "bread"]
+        },
+        { "name" : "Activity",
+          "type" : "heat",
+          "value" : ["Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Cooking", "Driving", "Working", "Working", "Working", "Working", "Working", "Working", "Working", "Working", "Driving", "Cooking", "Watching TV", "Watching TV", "Exercising", "Reading"]
+        },
+        { "name" : "Exercise",
+          "type" : "boolean",
+          "value" : true
+        },
+        { "name" : "Money Spent",
+          "type" : "count",
+          "value" : 33
+        }
+        ]
+      },
+      { "date": "something", "trackers": [
+        { "name" : "Mood",
+          "type" : "pie",
+          "value" : "Happy"
+        },
+        { "name" : "Purchase",
+          "type" : "wordcloud",
+          "value" : ["milk", "orange juice", "bread"]
+        },
+        { "name" : "Activity",
+          "type" : "heat",
+          "value" : ["Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Cooking", "Driving", "Working", "Working", "Working", "Working", "Working", "Working", "Working", "Working", "Driving", "Cooking", "Watching TV", "Watching TV", "Exercising", "Reading"]
+        },
+        { "name" : "Exercise",
+          "type" : "boolean",
+          "value" : true
+        },
+        { "name" : "Money Spent",
+          "type" : "count",
+          "value" : 33
+        }
+        ]
+      }
+    ]
+  }]
+}
