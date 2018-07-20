@@ -14,8 +14,13 @@ import firebaseConfig from './firebaseConfig';
 import firebase from 'firebase';
 
 firebase.initializeApp(firebaseConfig);
-const users = firebase.database().ref('users');
-console.log(users);
+const ref = firebase.database().ref('users');
+ref.once("value")
+  .then(function(snapshot) {
+    var key = snapshot.child("0/name").val();
+    console.log(key);
+  });
+
 
 class App extends React.Component {
 
