@@ -1,6 +1,7 @@
 import React from 'react';
 import Day from './Day';
 import dateFns from "date-fns";
+import { v4 } from 'uuid';
 
 class Calendar extends React.Component {
   constructor(props) {
@@ -21,8 +22,11 @@ class Calendar extends React.Component {
   }
 
   renderSingleDay(dayNum) {
+    function clicky () {
+      console.log(this.state.date);
+    }
     return(
-      <Day date={dayNum} />
+      <Day onClick={clicky} key={v4()} date={dayNum} />
     );
   }
 

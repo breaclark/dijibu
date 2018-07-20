@@ -9,3 +9,8 @@ function Day(props) {
 }
 
 export default Day;
+
+
+// <Route exact path='/' render={()=><TrackersMain
+//     dates={this.state.user.dates}
+//     date={this.state.date}/>}/>
