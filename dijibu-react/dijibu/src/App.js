@@ -15,7 +15,7 @@ import firebase from 'firebase';
 
 firebase.initializeApp(firebaseConfig);
 const users = firebase.database().ref('users');
-console.log(users)
+console.log(users);
 
 class App extends React.Component {
 
