@@ -1,9 +1,11 @@
 import React from 'react';
 
-function Tracker() {
+function Tracker(props) {
     return (
       <div>
-        <h1>Tracker</h1>
+        <h1>{props.name}</h1>
+        <p>{props.options}</p>
+        <p>{props.value}</p>
       </div>
     );
 }

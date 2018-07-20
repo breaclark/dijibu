@@ -5,6 +5,7 @@
   "dependencies": {
     "d3": "^5.5.0",
     "date-fns": "^1.29.0",
+    "firebase": "^3.0.0",
     "plotly.js": "^1.39.2",
     "react": "^16.4.1",
     "react-d3-cloud": "^0.6.0",
