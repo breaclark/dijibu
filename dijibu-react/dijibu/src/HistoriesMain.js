@@ -17,6 +17,8 @@ function HistoriesMain(props) {
         <History
         dataValues={props.dataValues4}
         layoutValues={props.layoutValues4}
+        dataValues2={props.dataValues42}
+        layoutValues2={props.layoutValues42}
         historyName="Tracker 4"/>
         <History
         dataValues={props.dataValues5}

@@ -20,6 +20,7 @@ function History(props) {
       <div>
         <Plot
           data={[
+            props.dataValues2,
             props.dataValues
           ]}
         layout={ props.layoutValues }
