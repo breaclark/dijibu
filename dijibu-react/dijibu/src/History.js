@@ -46,7 +46,7 @@ function History(props) {
           data={data}
           fontSizeMapper={fontSizeMapper}
         />
-      <svg ref={chartArea => this.chartArea = chartArea}
+      <svg ref={chartArea => chartArea = chartArea}
       width={600} height={600}>
       </svg>
         <h1>{props.historyName}</h1>
