@@ -73,6 +73,28 @@ class App extends React.Component {
         },
         showlegend: false
       },
+      dataValues4:{
+        values: [4.1666, 4.1666, 4.1666, 4.1666, 4.1666, 4.1666, 4.1666, 4.1666, 4.1666, 4.1666, 4.1666, 4.1666, 4.1666, 4.1666, 4.1666, 4.1666, 4.1666, 4.1666, 4.1666, 4.1666, 4.1666, 4.1666, 4.1666, 4.1666],
+        labels: ["12","1","2","3","4","5","6","7","8","9","10","11","12p","1p","2p","3p","4p","5p","6p","7p","8p","9p","10p","11p"],
+        type: "pie",
+        marker: {
+          colors: ["#F6D1B9", "#092E46", "#D7D7D7", "#092E46", "#738678", "#092E46", "#F6D1B9","#F6D1B9", "#092E46", "#D7D7D7", "#092E46", "#738678", "#092E46",  "#F6D1B9", "#738678", "#092E46", "#F6D1B9", "#F6D1B9", "#092E46", "#D7D7D7", "#092E46", "#738678", "#092E46", "#F6D1B9"]
+        },
+        sort: false,
+        hole: 0.85,
+        textinfo: "none"
+      },
+      layoutValues4: {
+        height: 550,
+        width: 600,
+        margin: {
+          l: 20,
+          r: 20,
+          b: 20,
+          t: 20
+        },
+        showlegend: false
+      },
       dataValues5:{
         values: [14.285, 14.285, 14.285, 14.285, 14.285, 14.285, 14.285],
         labels: ["Sunday", "Saturday", "Friday", "Thursday", "Wednesday", "Tuesday", "Monday"],
@@ -110,6 +132,8 @@ class App extends React.Component {
           layoutValues1={this.state.layoutValues1}
           dataValues3={this.state.dataValues3}
           layoutValues3={this.state.layoutValues3}
+          dataValues4={this.state.dataValues4}
+          layoutValues4={this.state.layoutValues4}
           dataValues5={this.state.dataValues5}
           layoutValues5={this.state.layoutValues5} /> }/>
           <Route path='/edit' render={()=><EditTrackers /> }/>
