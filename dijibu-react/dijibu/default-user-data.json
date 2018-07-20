@@ -3,7 +3,7 @@
     "name": "BreaClark",
     "password": "password",
     "dates": [
-      { "date": "something", "trackers": [
+      { "date": "07/02/2018", "trackers": [
         { "name" : "Mood",
           "type" : "pie",
           "value" : "Happy"
@@ -26,37 +26,37 @@
         }
         ]
       },
-      { "date": "something", "trackers": [
+      { "date": "07/03/2018", "trackers": [
         { "name" : "Mood",
           "type" : "pie",
-          "value" : "Happy"
+          "value" : "Frustrated"
         },
         { "name" : "Purchase",
           "type" : "wordcloud",
-          "value" : ["milk", "orange juice", "bread"]
+          "value" : ["bread", "milk", "cake", "apple"]
         },
         { "name" : "Activity",
           "type" : "heat",
-          "value" : ["Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Cooking", "Driving", "Working", "Working", "Working", "Working", "Working", "Working", "Working", "Working", "Driving", "Cooking", "Watching TV", "Watching TV", "Exercising", "Reading"]
+          "value" : ["Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Cooking", "Driving", "Working", "Working", "Working", "Working", "Working", "Working", "Working", "Working", "Driving", "Watching TV", "Watching TV", "Watching TV", "Reading", "Reading", "Sleeping"]
         },
         { "name" : "Exercise",
           "type" : "boolean",
-          "value" : true
+          "value" : false
         },
         { "name" : "Money Spent",
           "type" : "count",
-          "value" : 33
+          "value" : 80
         }
         ]
       },
-      { "date": "something", "trackers": [
+      { "date": "07/04/2018", "trackers": [
         { "name" : "Mood",
           "type" : "pie",
           "value" : "Happy"
         },
         { "name" : "Purchase",
           "type" : "wordcloud",
-          "value" : ["milk", "orange juice", "bread"]
+          "value" : ["tv", "bread"]
         },
         { "name" : "Activity",
           "type" : "heat",
@@ -68,45 +68,45 @@
         },
         { "name" : "Money Spent",
           "type" : "count",
-          "value" : 33
+          "value" : 4
         }
         ]
       },
-      { "date": "something", "trackers": [
+      { "date": "07/05/2018", "trackers": [
         { "name" : "Mood",
           "type" : "pie",
-          "value" : "Happy"
+          "value" : "Frustrated"
         },
         { "name" : "Purchase",
           "type" : "wordcloud",
-          "value" : ["milk", "orange juice", "bread"]
+          "value" : ["stationery", "milk", "bread"]
         },
         { "name" : "Activity",
           "type" : "heat",
-          "value" : ["Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Cooking", "Driving", "Working", "Working", "Working", "Working", "Working", "Working", "Working", "Working", "Driving", "Cooking", "Watching TV", "Watching TV", "Exercising", "Reading"]
+          "value" : ["Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Cooking", "Driving", "Working", "Working", "Working", "Working", "Working", "Working", "Working", "Working", "Driving", "Cooking", "Watching TV", "Watching TV", "Watching TV", "Reading", "Sleeping", "Sleeping"]
         },
         { "name" : "Exercise",
           "type" : "boolean",
-          "value" : true
+          "value" : false
         },
         { "name" : "Money Spent",
           "type" : "count",
-          "value" : 33
+          "value" : 18
         }
         ]
       },
-      { "date": "something", "trackers": [
+      { "date": "07/06/2018", "trackers": [
         { "name" : "Mood",
           "type" : "pie",
-          "value" : "Happy"
+          "value" : "Moody"
         },
         { "name" : "Purchase",
           "type" : "wordcloud",
-          "value" : ["milk", "orange juice", "bread"]
+          "value" : ["bread", "gift"]
         },
         { "name" : "Activity",
           "type" : "heat",
-          "value" : ["Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Cooking", "Driving", "Working", "Working", "Working", "Working", "Working", "Working", "Working", "Working", "Driving", "Cooking", "Watching TV", "Watching TV", "Exercising", "Reading"]
+          "value" : ["Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Cooking", "Driving", "Shopping", "Shopping", "Shopping", "Sleeping", "Cooking", "Reading", "Watching TV", "Watching TV", "Driving", "Cooking", "Watching TV", "Watching TV", "Exercising", "Reading"]
         },
         { "name" : "Exercise",
           "type" : "boolean",
@@ -114,22 +114,45 @@
         },
         { "name" : "Money Spent",
           "type" : "count",
-          "value" : 33
+          "value" : 133
         }
         ]
       },
-      { "date": "something", "trackers": [
+      { "date": "07/07/2018", "trackers": [
+        { "name" : "Mood",
+          "type" : "pie",
+          "value" : "Moody"
+        },
+        { "name" : "Purchase",
+          "type" : "wordcloud",
+          "value" : ["orange juice", "dress"]
+        },
+        { "name" : "Activity",
+          "type" : "heat",
+          "value" : ["Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Cooking", "Driving", "Working", "Working", "Working", "Shopping", "Working", "Working", "Working", "Working", "Driving", "Cooking", "Watching TV", "Watching TV", "Reading", "Reading"]
+        },
+        { "name" : "Exercise",
+          "type" : "boolean",
+          "value" : false
+        },
+        { "name" : "Money Spent",
+          "type" : "count",
+          "value" : 57
+        }
+        ]
+      },
+      { "date": "07/08/2018", "trackers": [
         { "name" : "Mood",
           "type" : "pie",
           "value" : "Happy"
         },
         { "name" : "Purchase",
           "type" : "wordcloud",
-          "value" : ["milk", "orange juice", "bread"]
+          "value" : ["bread"]
         },
         { "name" : "Activity",
           "type" : "heat",
-          "value" : ["Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Cooking", "Driving", "Working", "Working", "Working", "Working", "Working", "Working", "Working", "Working", "Driving", "Cooking", "Watching TV", "Watching TV", "Exercising", "Reading"]
+          "value" : ["Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Cooking", "Driving", "Exercising", "Exercising", "Watching TV", "Watching TV", "Reading", "Watching TV", "Watching TV", "Reading", "Driving", "Cooking", "Watching TV", "Watching TV", "Exercising", "Reading"]
         },
         { "name" : "Exercise",
           "type" : "boolean",
@@ -137,7 +160,7 @@
         },
         { "name" : "Money Spent",
           "type" : "count",
-          "value" : 33
+          "value" : 5
         }
         ]
       }

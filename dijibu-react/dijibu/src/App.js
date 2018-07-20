@@ -152,6 +152,7 @@ class App extends React.Component {
   }
 
 // Once data is in firebase, will need to translate into charts here
+// Will also need to add in basic trackers without values when someone signs up (later)
 
 
   render() {
