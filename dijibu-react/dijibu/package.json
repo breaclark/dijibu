@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "d3": "^5.5.0",
     "date-fns": "^1.29.0",
     "plotly.js": "^1.39.2",
     "react": "^16.4.1",
