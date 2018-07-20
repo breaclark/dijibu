@@ -5,21 +5,20 @@ import WordCloud from 'react-d3-cloud';
 function History(props) {
 
   let historyContent;
-  if (props.type === "wordcloud") {
-    // const fontSizeMapper = word => Math.log2(word.value) * 5;
-    // historyContent =  <WordCloud
-    //   data={ props.dataValues }
-    //   fontSizeMapper={fontSizeMapper} />
+  if (props.history.type === "wordcloud") {
+    const fontSizeMapper = word => Math.log2(word.value) * 5;
+    historyContent =  <WordCloud
+      data={ props.history.dataValues }
+      fontSizeMapper={fontSizeMapper} />
   } else {
     historyContent = <Plot
-      data={ props.dataValues }
-    layout={ props.layoutValues }
-      />
+      data={ props.history.dataValues }
+    layout={ props.history.layoutValues } />
   }
   return (
     <div>
       {historyContent}
-    <h1>{props.name}</h1>
+    <h1>{props.history.name} Tracker</h1>
     </div>
   );
 }

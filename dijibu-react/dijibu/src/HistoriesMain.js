@@ -10,10 +10,7 @@ function HistoriesMain(props) {
           return <History
             historyId={historyId}
             key={historyId}
-            type={history.type}
-            name={history.name}
-            datavalues={history.dataValues}
-            layout={history.layout} />
+            history={history} />
         })}
       </div>
     );
