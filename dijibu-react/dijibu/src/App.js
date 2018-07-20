@@ -161,10 +161,11 @@ class App extends React.Component {
     ref.once("value")
       .then((snapshot) => {
         userData = JSON.parse(JSON.stringify(snapshot.child("0").val()));
-        console.log(userData);
         this.setState({
           user: userData
-        }, console.log(this.state));
+        }, function() {
+            console.log(this.state);
+        });
       });
   }
 
@@ -174,21 +175,35 @@ class App extends React.Component {
 
 
   render() {
-    return (
-      <div className="App">
-        <Header />
-        <Switch>
-          <Route exact path='/signIn' render={()=><SignIn />}/>
-          <Route exact path='/' render={()=><TrackersMain date={this.state.date}/>}/>
-          <Route path='/calendar' render={()=><Calendar date={this.state.date}/> }/>
-          <Route path='/histories' render={()=><HistoriesMain histories={this.state.histories} /> }/>
-          <Route path='/edit' render={()=><EditTrackers /> }/>
-          <Route path='/new' render={()=><NewTracker /> }/>
-          <Route path='/delete' render={()=><DeleteTracker /> }/>
-          <Route component={Error404} />
-        </Switch>
-      </div>
-    );
+    if (this.state.user) {
+      return (
+        <div className="App">
+          <Header />
+          <Switch>
+            <Route exact path='/signIn' render={()=><SignIn />}/>
+            <Route exact path='/' render={()=><TrackersMain
+                dates={this.state.user.dates}
+                date={this.state.date}/>}/>
+            <Route path='/calendar' render={()=><Calendar
+                date={this.state.date}/> }/>
+            <Route path='/histories' render={()=><HistoriesMain
+                histories={this.state.histories} /> }/>
+            <Route path='/edit' render={()=><EditTrackers /> }/>
+            <Route path='/new' render={()=><NewTracker /> }/>
+            <Route path='/delete' render={()=><DeleteTracker /> }/>
+            <Route component={Error404} />
+          </Switch>
+        </div>
+      );
+    } else {
+      return (
+        <div className="App">
+          <Header />
+        </div>
+      );
+    }
+
+
   }
 }
 
