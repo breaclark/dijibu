@@ -13,20 +13,12 @@ import { Switch, Route } from 'react-router-dom';
 import firebaseConfig from './firebaseConfig';
 import firebase from 'firebase';
 
-firebase.initializeApp(firebaseConfig);
-const ref = firebase.database().ref('users');
-ref.once("value")
-  .then(function(snapshot) {
-    var key = snapshot.child("0/name").val();
-    console.log(key);
-  });
-
-
 class App extends React.Component {
 
   constructor(props){
     super(props);
     this.state = {
+      user: null,
       date: new Date(),
       histories: [
         { type: "pie",
@@ -162,7 +154,20 @@ class App extends React.Component {
     };
   }
 
-// Connect to firebase, get whole user data and put into state
+  componentDidMount() {
+    firebase.initializeApp(firebaseConfig);
+    const ref = firebase.database().ref('users');
+    let userData;
+    ref.once("value")
+      .then((snapshot) => {
+        userData = JSON.parse(JSON.stringify(snapshot.child("0").val()));
+        console.log(userData);
+        this.setState({
+          user: userData
+        }, console.log(this.state));
+      });
+  }
+
 // Once data is in firebase, will need to translate into charts here
 // Might actually do that at the histories main level (so it would take into account new info if necessary)
 // Will also need to add in basic trackers without values when someone signs up (later)
