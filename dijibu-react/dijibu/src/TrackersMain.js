@@ -1,6 +1,10 @@
 import React from 'react';
-import Tracker from './Tracker';
 import dateFns from "date-fns";
+import PieTracker from './PieTracker';
+import WordCloudTracker from './WordCloudTracker';
+import HeatTracker from './HeatTracker';
+import BooleanTracker from './BooleanTracker';
+import CountTracker from './CountTracker';
 
 function TrackersMain(props) {
 
@@ -30,10 +34,34 @@ function TrackersMain(props) {
         <div className="tracker-grid">
           {Object.keys(requestedDatesTrackers).map(function(trackerId){
             const tracker = requestedDatesTrackers[trackerId];
-            return <Tracker
-              trackerId={trackerId}
-              key={trackerId}
-              tracker={tracker} />
+            if (tracker.type === 'pie') {
+              return <PieTracker
+                trackerId={trackerId}
+                key={trackerId}
+                tracker={tracker} />
+            } else if (tracker.type === 'wordcloud') {
+              return <WordCloudTracker
+                trackerId={trackerId}
+                key={trackerId}
+                tracker={tracker} />
+            } else if (tracker.type === 'heat') {
+              return <HeatTracker
+                trackerId={trackerId}
+                key={trackerId}
+                tracker={tracker} />
+            } else if (tracker.type === 'boolean') {
+              return <BooleanTracker
+                trackerId={trackerId}
+                key={trackerId}
+                tracker={tracker} />
+            } else if (tracker.type === 'count') {
+              return <CountTracker
+                trackerId={trackerId}
+                key={trackerId}
+                tracker={tracker} />
+            } else return (
+              <div></div>
+            );
           })}
         </div>
         {/*// Should be able to get the date from the calendar as well
