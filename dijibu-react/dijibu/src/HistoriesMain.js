@@ -5,25 +5,16 @@ function HistoriesMain(props) {
     return (
       <div>
         <h1>Tracker Histories</h1>
-        <History
-        dataValues={props.dataValues1}
-        layoutValues={props.layoutValues1}
-        historyName="Tracker 1"/>
-        <History historyName="Tracker 2"/>
-        <History
-        dataValues={props.dataValues3}
-        layoutValues={props.layoutValues3}
-        historyName="Tracker 3"/>
-        <History
-        dataValues={props.dataValues4}
-        layoutValues={props.layoutValues4}
-        dataValues2={props.dataValues42}
-        layoutValues2={props.layoutValues42}
-        historyName="Tracker 4"/>
-        <History
-        dataValues={props.dataValues5}
-        layoutValues={props.layoutValues5}
-        historyName="Tracker 5"/>
+        {Object.keys(props.histories).map(function(historyId){
+          const history = props.histories[historyId];
+          return <History
+            historyId={historyId}
+            key={historyId}
+            type={history.type}
+            name={history.name}
+            datavalues={history.dataValues}
+            layout={history.layout} />
+        })}
       </div>
     );
 }
