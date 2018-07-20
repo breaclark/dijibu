@@ -7,8 +7,8 @@ function Tracker(props) {
       <div className="multi-tracker tracker-tile">
           <p>{props.tracker.name} - {props.tracker.value} <br />
           (tap to change)</p>
-        // add in a function to change this
-        // might want to make these into different components?
+        {/*}// add in a function to change this
+        // might want to make these into different components?*/}
       </div>
     );
   } else if (props.tracker.type === 'wordcloud') {

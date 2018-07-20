@@ -163,8 +163,6 @@ class App extends React.Component {
         userData = JSON.parse(JSON.stringify(snapshot.child("0").val()));
         this.setState({
           user: userData
-        }, function() {
-            console.log(this.state);
         });
       });
   }
@@ -187,6 +185,7 @@ class App extends React.Component {
             <Route path='/calendar' render={()=><Calendar
                 date={this.state.date}/> }/>
             <Route path='/histories' render={()=><HistoriesMain
+                dates={this.state.user.dates}
                 histories={this.state.histories} /> }/>
             <Route path='/edit' render={()=><EditTrackers /> }/>
             <Route path='/new' render={()=><NewTracker /> }/>

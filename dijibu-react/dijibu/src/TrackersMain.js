@@ -13,19 +13,32 @@ function TrackersMain(props) {
     }
     return (
       <div>
+        <style>{`
+          .tracker-grid {
+            color: white;
+            display: grid;
+            grid-auto-rows: 180px;
+            grid-template-columns: repeat( auto-fit, minmax(180px, 1fr) );
+            grid-auto-flow: dense;
+            grid-gap: 20px;
+            margin-left: 20px;
+            margin-right: 20px;
+            min-width: 330px;
+          }
+        `}</style>
         <h1>{requestedDate}</h1>
-        <p>{}</p>
-        {Object.keys(requestedDatesTrackers).map(function(trackerId){
-          const tracker = requestedDatesTrackers[trackerId];
-          return <Tracker
-            trackerId={trackerId}
-            key={trackerId}
-            tracker={tracker} />
-        })}
+        <div className="tracker-grid">
+          {Object.keys(requestedDatesTrackers).map(function(trackerId){
+            const tracker = requestedDatesTrackers[trackerId];
+            return <Tracker
+              trackerId={trackerId}
+              key={trackerId}
+              tracker={tracker} />
+          })}
+        </div>
         {/*// Should be able to get the date from the calendar as well
         // Then render and send appropriate data for each date
-        // Only let trackers be changed if the date is today (later)
-        // Get info passed down from top, then translate here into trackers*/}
+        // Only let trackers be changed if the date is today (later)*/}
       </div>
     );
 }
