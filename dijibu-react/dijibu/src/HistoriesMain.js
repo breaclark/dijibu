@@ -254,7 +254,6 @@ function HistoriesMain(props) {
         textinfo: "none"
       });
     }
-    console.log(dataValues);
     return(
       { type: "heat",
         name: "Activity",
@@ -274,6 +273,52 @@ function HistoriesMain(props) {
     );
   }
 
+  function frequencyMapFromArray(startArray) {
+    let dict = new Map();
+    for(let i=0; i< startArray.length; i++) {
+      if (dict.has(startArray[i])) {
+        dict.set(startArray[i], parseInt(dict.get(startArray[i])) + 1);
+      } else {
+        dict.set(startArray[i], 1);
+      }
+    }
+    let dictFormatted = [];
+    dict.forEach(function(key, value, map) {
+      dictFormatted.push({text: value, value: key});
+    });
+    return dictFormatted;
+  }
+
+  function parseWordCloudData(name) {
+    let wordbag = [];
+    for(let i=props.dates.length - 1; i>=props.dates.length - 8; i--) {
+      if(i <  0) {
+        break;
+      } else {
+        let possibleElement = props.dates[i].trackers.find(function(element) {
+          if (element.type === "wordcloud" && element.name === name) {
+            return element;
+          }
+        }).value;
+        if (typeof possibleElement !== "undefined") {
+          wordbag = wordbag.concat(possibleElement);
+        }
+      }
+    }
+    let dict = frequencyMapFromArray(wordbag);
+    return dict;
+  }
+
+  function makeWordCloudChart(name) {
+    let dict = parseWordCloudData(name);
+    return(
+      { type: "wordcloud",
+        name: name,
+        dataValues: dict
+      }
+    );
+  }
+
   function makeHistories() {
     let histories = [];
     let lastDay = props.dates[props.dates.length -1].trackers;
@@ -281,7 +326,7 @@ function HistoriesMain(props) {
       if (lastDay[i].type === "pie") {
         histories.push(makePieChart(lastDay[i].name));
       } else if (lastDay[i].type === "wordcloud") {
-
+        histories.push(makeWordCloudChart(lastDay[i].name));
       } else if (lastDay[i].type === "heat") {
         histories.push(makeHeatChart(lastDay[i].name));
       } else if (lastDay[i].type === "boolean") {

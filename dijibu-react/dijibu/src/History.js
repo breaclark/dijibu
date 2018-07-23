@@ -7,7 +7,7 @@ function History(props) {
   let historyContent;
   if (props.history.type === "wordcloud") {
     //need to figure out how to make this on color scheme
-    const fontSizeMapper = word => Math.log2(word.value) * 5;
+    const fontSizeMapper = word => Math.log2(word.value + 1) * 15;
     historyContent =  <WordCloud
       data={ props.history.dataValues }
       fontSizeMapper={fontSizeMapper} />
