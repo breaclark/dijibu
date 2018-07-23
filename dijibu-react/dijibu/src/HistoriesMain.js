@@ -204,7 +204,7 @@ function HistoriesMain(props) {
         return element;
       }
     }).options;
-    let colorsOptions = ["#DA6257", "#092e46", "#738678", "#e99259", "#f6d1b9", "#d7d7d7", "ffffff"];
+    let colorsOptions = ["#DA6257", "#092e46", "#738678", "#e99259", "#f6d1b9", "#d7d7d7", "#c9e6d1", "#ffffff"];
     let dict = {};
     options.forEach((key, i) => dict[key] = colorsOptions[i]);
     let labels = [];
@@ -286,7 +286,6 @@ function HistoriesMain(props) {
     dict.forEach(function(key, value, map) {
       dictFormatted.push({text: value, value: key});
     });
-    console.log(dictFormatted);
     return dictFormatted;
   }
 
