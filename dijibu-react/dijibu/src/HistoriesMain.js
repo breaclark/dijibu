@@ -286,6 +286,7 @@ function HistoriesMain(props) {
     dict.forEach(function(key, value, map) {
       dictFormatted.push({text: value, value: key});
     });
+    console.log(dictFormatted);
     return dictFormatted;
   }
 
