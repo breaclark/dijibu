@@ -9,7 +9,7 @@ function HistoriesMain(props) {
         return element;
       }
     }).options;
-    let colorsOptions = ["#DA6257", "#092e46", "#738678", "#e99259", "#f6d1b9", "#d7d7d7"];
+    let colorsOptions = ["#DA6257", "#092e46", "#738678", "#e99259", "#f6d1b9", "#d7d7d7", "ffffff"];
     let dict = {};
     options.forEach((key, i) => dict[key] = colorsOptions[i]);
     let labels = [];
@@ -198,6 +198,82 @@ function HistoriesMain(props) {
     );
   }
 
+  function parseHeatData(name) {
+    let options = props.dates[props.dates.length-1].trackers.find(function(element) {
+      if (element.type === "heat" && element.name === name) {
+        return element;
+      }
+    }).options;
+    let colorsOptions = ["#DA6257", "#092e46", "#738678", "#e99259", "#f6d1b9", "#d7d7d7", "ffffff"];
+    let dict = {};
+    options.forEach((key, i) => dict[key] = colorsOptions[i]);
+    let labels = [];
+    let colors = [];
+    for(let i=props.dates.length - 1; i>=props.dates.length - 8; i--) {
+      let labelsSingle = [];
+      let colorsSingle = [];
+      if(i <  0) {
+        break;
+      } else {
+        let possibleElement = props.dates[i].trackers.find(function(element) {
+          if (element.type === "heat" && element.name === name) {
+            return element;
+          }
+        }).value;
+        if (typeof possibleElement !== "undefined") {
+          for (let i=0; i<possibleElement.length; i++) {
+            labelsSingle.push(possibleElement[i]);
+            colorsSingle.push(dict[possibleElement[i]]);
+          }
+        }
+      }
+      labels.push(labelsSingle);
+      colors.push(colorsSingle);
+    }
+    return {
+      labels: labels,
+      colors: colors
+    }
+  }
+
+  function makeHeatChart(name) {
+    let parse = parseHeatData(name);
+    let labels = parse.labels;
+    let colors = parse.colors;
+    let dataValues = [];
+    for (let i=0; i< labels.length; i++) {
+      dataValues.push({
+        values: [4.1666, 4.1666, 4.1666, 4.1666, 4.1666, 4.1666, 4.1666, 4.1666, 4.1666, 4.1666, 4.1666, 4.1666, 4.1666, 4.1666, 4.1666, 4.1666, 4.1666, 4.1666, 4.1666, 4.1666, 4.1666, 4.1666, 4.1666, 4.1666],
+        labels: labels[i],
+        type: "pie",
+        marker: {
+          colors: colors[i]
+        },
+        sort: false,
+        hole: (i)*0.14,
+        textinfo: "none"
+      });
+    }
+    console.log(dataValues);
+    return(
+      { type: "heat",
+        name: "Activity",
+        dataValues: dataValues,
+        layout: {
+          height: 550,
+          width: 600,
+          margin: {
+            l: 20,
+            r: 20,
+            b: 20,
+            t: 20
+          },
+          showlegend: false
+        }
+      }
+    );
+  }
+
   function makeHistories() {
     let histories = [];
     let lastDay = props.dates[props.dates.length -1].trackers;
@@ -207,7 +283,7 @@ function HistoriesMain(props) {
       } else if (lastDay[i].type === "wordcloud") {
 
       } else if (lastDay[i].type === "heat") {
-
+        histories.push(makeHeatChart(lastDay[i].name));
       } else if (lastDay[i].type === "boolean") {
         histories.push(makeBooleanChart(lastDay[i].name));
       } else if (lastDay[i].type === "count") {
