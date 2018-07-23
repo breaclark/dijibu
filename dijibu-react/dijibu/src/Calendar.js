@@ -7,7 +7,8 @@ class Calendar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      date: props.date
+      date: props.date,
+      dates: props.dates
     }
     this.currentMonth = this.currentMonth.bind(this);
     this.renderSingleDay = this.renderSingleDay.bind(this);
@@ -22,11 +23,8 @@ class Calendar extends React.Component {
   }
 
   renderSingleDay(dayNum) {
-    function clicky () {
-      console.log(this.state.date);
-    }
     return(
-      <Day onClick={clicky} key={v4()} date={dayNum} />
+      <Day wholeDate={this.state.date}  dates={this.state.dates} key={v4()} date={dayNum} />
     );
   }
 
@@ -40,7 +38,6 @@ class Calendar extends React.Component {
       monthDays.push(this.renderSingleDay(String(i)));
     }
     return monthDays;
-
   }
 
   previousMonth(){
