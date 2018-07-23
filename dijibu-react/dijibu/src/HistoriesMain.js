@@ -126,6 +126,78 @@ function HistoriesMain(props) {
     );
   }
 
+  function parseCountData(name) {
+    let theta = [];
+    let r = [];
+    for(let i=props.dates.length - 1; i>=props.dates.length - 8; i--) {
+      if(i <  0) {
+        break;
+      } else {
+        let possibleElement = props.dates[i].trackers.find(function(element) {
+          if (element.type === "count" && element.name === name) {
+            return element;
+          }
+        }).value;
+        if (typeof possibleElement !== "undefined") {
+          theta.push(props.dates[i].date);
+          r.push(possibleElement);
+        }
+      }
+    }
+    return {
+      theta: theta,
+      r: r
+    }
+  }
+
+  function makeCountChart(name) {
+    let parse = parseCountData(name);
+    let theta = parse.theta;
+    let r = parse.r;
+    return(
+      { type: "count",
+        name: "Money Spent",
+        dataValues: [{
+          type: "scatterpolar",
+          r: r,
+          theta: theta,
+          fill: "toself",
+          connectgaps: true,
+          fillcolor: "rgba(246, 209, 185, 0.5)",
+          line: {
+            color: "#DA6257"
+          }
+        }],
+        layout: {
+          polar: {
+            radialaxis: {
+              color: "#DA6257",
+              visible: true,
+              angle: 90,
+              linecolor: "#D7D7D7",
+              gridcolor: "#D7D7D7",
+              nticks: 3,
+              tickangle: 90
+            },
+            angularaxis: {
+              color: "#D7D7D7",
+              direction: "clockwise"
+            }
+          },
+          height: 550,
+          width: 520,
+          margin: {
+            l: 60,
+            r: 40,
+            b: 20,
+            t: 20
+          },
+          showlegend: false
+        }
+      }
+    );
+  }
+
   function makeHistories() {
     let histories = [];
     let lastDay = props.dates[props.dates.length -1].trackers;
@@ -139,7 +211,7 @@ function HistoriesMain(props) {
       } else if (lastDay[i].type === "boolean") {
         histories.push(makeBooleanChart(lastDay[i].name));
       } else if (lastDay[i].type === "count") {
-
+        histories.push(makeCountChart(lastDay[i].name));
       }
     }
     return histories;
