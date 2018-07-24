@@ -78,14 +78,7 @@ class App extends React.Component {
       ]});
     }
     const trackerRef = firebase.database().ref(`users/0/dates/${this.state.date}/trackers/${trackerId}/value`);
-    if (trackerType === "boolean") {
-      trackerRef.set(newInfo);
-    } else if (trackerType === "pie") {
-      trackerRef.set(newInfo);
-    } else if (trackerType === "count") {
-      console.log(newInfo);
-      trackerRef.set(newInfo);
-    } else if (trackerType === "heat") {
+    if (trackerType === "boolean" || trackerType === "pie" || trackerType === "count" || trackerType === "heat") {
       trackerRef.set(newInfo);
     } else if (trackerType === "wordcloud") {
       trackerRef.push(newInfo);

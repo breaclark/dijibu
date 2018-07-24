@@ -2,6 +2,14 @@ import React from 'react';
 import WordCloudTrackerItem from './WordCloudTrackerItem';
 
 function WordCloudTracker(props) {
+
+  let inputValue = null;
+
+  function wordCloudChange() {
+    props.trackerChange(inputValue.value, props.trackerId, props.tracker.type, props.date, props.defaultInfo);
+    inputValue.value = '';
+  }
+
   return (
     <div className="text-tracker tracker-tile">
       <style>{`
@@ -39,8 +47,8 @@ function WordCloudTracker(props) {
         <WordCloudTrackerItem lineValue={props.tracker.value[lineValue]} key={lineValue}/>
       );
     })}
-    <form>
-      <input />
+    <form onSubmit={wordCloudChange}>
+      <input type="text" ref={(input) => {inputValue = input;}}/>
       <button type="submit">Add</button>
     </form>
     </div>
