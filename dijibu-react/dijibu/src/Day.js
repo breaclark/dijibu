@@ -6,14 +6,13 @@ import dateFns from "date-fns";
 function Day(props) {
 
   let dayDate = new Date(dateFns.getYear(props.wholeDate), dateFns.getMonth(props.wholeDate),props.date);
-
   function dateClick() {
-    props.onDateClick(dayDate);
+    props.onDateClick(dayDate, props.id);
   }
 
   return (
     <div>
-      <Link to='/trackers' datekey={props.id} onClick = {dateClick} ><h1>{props.date}</h1></Link>
+      <Link to='/trackers' onClick = {dateClick} ><h1>{props.date}</h1></Link>
     </div>
   );
 }

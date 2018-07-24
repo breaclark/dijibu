@@ -7,7 +7,7 @@ function BooleanTracker(props) {
 
 
   function booleanChange() {
-    props.trackerChange(!props.tracker.value, props.trackerId, props.tracker.type, props.date, props.datekey, props.defaultInfo);
+    props.trackerChange(!props.tracker.value, props.trackerId, props.tracker.type, props.date, props.defaultInfo);
   }
 
   return (

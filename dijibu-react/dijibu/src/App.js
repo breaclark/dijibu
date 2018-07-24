@@ -19,6 +19,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       user: null,
+      dateId: null,
       date: new Date(),
     };
     this.handleDateChange = this.handleDateChange.bind(this);
@@ -38,16 +39,17 @@ class App extends React.Component {
       });
   }
 
-  handleDateChange(newDate) {
+  handleDateChange(newDate, newDateId) {
     this.setState({
-      date: newDate
+      date: newDate,
+      dateId: newDateId
     });
   }
 
-  handleTrackerChange(newInfo, trackerId, trackerType, date, datekey, defaultInfo) {
+  handleTrackerChange(newInfo, trackerId, trackerType, date, defaultInfo) {
     if(defaultInfo) {
-      firebase.database().ref(`users/0/dates/${datekey}/date`).set(date);
-      firebase.database().ref(`users/0/dates/${datekey}/trackers`).set([
+      firebase.database().ref(`users/0/dates/${this.state.dateId}/date`).set(date);
+      firebase.database().ref(`users/0/dates/${this.state.dateId}/trackers`).set([
       { "name" : "Mood",
         "type" : "pie",
         "options" : ["Happy", "Frustrated", "Moody", "Sad", "Thoughtful"],
@@ -75,8 +77,7 @@ class App extends React.Component {
       }
       ]);
     }
-    const trackerRef = firebase.database().ref(`users/0/dates/${datekey}/trackers/${trackerId}/value`);
-    console.log(trackerRef);
+    const trackerRef = firebase.database().ref(`users/0/dates/${this.state.dateId}/trackers/${trackerId}/value`);
     if (trackerType === "boolean") {
       trackerRef.set(newInfo);
     }
@@ -101,7 +102,8 @@ class App extends React.Component {
             <Route exact path='/trackers' render={()=><TrackersMain
                 onTrackerChange = {this.handleTrackerChange}
                 dates={this.state.user.dates}
-                date={this.state.date}/>}/>
+                date={this.state.date}
+                dateId = {this.state.dateId}/>}/>
             <Route path='/' render={()=><Calendar
                 onDateClick={this.handleDateChange}
                 dates={this.state.user.dates}

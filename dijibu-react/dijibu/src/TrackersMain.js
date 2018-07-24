@@ -10,8 +10,8 @@ function TrackersMain(props) {
     let defaultInfo = false;
     let requestedDate = dateFns.format(props.date, 'MMMM D, YYYY');
     let requestedDatesTrackers;
-    if(props.dates[props.dateKey]) {
-      requestedDatesTrackers = props.dates[props.dateKey].trackers;
+    if(props.dates[props.dateId]) {
+      requestedDatesTrackers = props.dates[props.dateId].trackers;
     } else {
       defaultInfo = true;
       requestedDatesTrackers = [
@@ -66,7 +66,6 @@ function TrackersMain(props) {
               return <PieTracker
                 trackerChange={props.onTrackerChange}
                 trackerId={trackerId}
-                datekey ={props.datekey}
                 date={props.date}
                 defaultInfo = {defaultInfo}
                 key={trackerId}
@@ -75,7 +74,6 @@ function TrackersMain(props) {
               return <WordCloudTracker
                 trackerChange={props.onTrackerChange}
                 trackerId={trackerId}
-                datekey ={props.datekey}
                 date={props.date}
                 defaultInfo = {defaultInfo}
                 key={trackerId}
@@ -84,7 +82,6 @@ function TrackersMain(props) {
               return <HeatTracker
                 trackerChange={props.onTrackerChange}
                 trackerId={trackerId}
-                datekey ={props.datekey}
                 date={props.date}
                 defaultInfo = {defaultInfo}
                 key={trackerId}
@@ -93,7 +90,6 @@ function TrackersMain(props) {
               return <BooleanTracker
                 trackerChange={props.onTrackerChange}
                 trackerId={trackerId}
-                datekey ={props.datekey}
                 date={props.date}
                 defaultInfo = {defaultInfo}
                 key={trackerId}
@@ -102,7 +98,6 @@ function TrackersMain(props) {
               return <CountTracker
                 trackerChange={props.onTrackerChange}
                 trackerId={trackerId}
-                datekey ={props.datekey}
                 date={props.date}
                 defaultInfo = {defaultInfo}
                 key={trackerId}
