@@ -3,8 +3,11 @@ import History from './History';
 
 function HistoriesMain(props) {
 
+  let dates = Object.entries(props.dates);
+  console.log(dates);
+
   function parsePieData(name) {
-    let options = props.dates[props.dates.length-1].trackers.find(function(element) {
+    let options = dates[dates.length-1][1].trackers.find(function(element) {
       if (element.type === "pie" && element.name === name) {
         return element;
       }
@@ -15,11 +18,11 @@ function HistoriesMain(props) {
     options.forEach((key, i) => dict[key] = colorsOptions[i]);
     let labels = [];
     let colors = [];
-    for(let i=props.dates.length - 1; i>=props.dates.length - 8; i--) {
+    for(let i=dates.length - 1; i>=dates.length - 8; i--) {
       if(i <  0) {
         break;
       } else {
-        let possibleElement = props.dates[i].trackers.find(function(element) {
+        let possibleElement = dates[i][1].trackers.find(function(element) {
           if (element.type === "pie" && element.name === name) {
             return element;
           }
@@ -70,11 +73,11 @@ function HistoriesMain(props) {
   function parseBooleanData(name) {
     let labels = [];
     let colors = [];
-    for(let i=props.dates.length - 1; i>=props.dates.length - 8; i--) {
+    for(let i=dates.length - 1; i>=dates.length - 8; i--) {
       if(i <  0) {
         break;
       } else {
-        let possibleElement = props.dates[i].trackers.find(function(element) {
+        let possibleElement = dates[i][1].trackers.find(function(element) {
           if (element.type === "boolean" && element.name === name) {
             return element;
           }
@@ -85,7 +88,7 @@ function HistoriesMain(props) {
           if (possibleElement) {
             colorResult = "#F6D1B9";
           }
-          labels.push(props.dates[i].date);
+          labels.push(dates[i][1].date);
           colors.push(colorResult);
         }
       }
@@ -132,18 +135,18 @@ function HistoriesMain(props) {
   function parseCountData(name) {
     let theta = [];
     let r = [];
-    for(let i=props.dates.length - 1; i>=props.dates.length - 8; i--) {
+    for(let i=dates.length - 1; i>=dates.length - 8; i--) {
       if(i <  0) {
         break;
       } else {
-        let possibleElement = props.dates[i].trackers.find(function(element) {
+        let possibleElement = dates[i][1].trackers.find(function(element) {
           if (element.type === "count" && element.name === name) {
             return element;
           }
           return false;
         }).value;
         if (typeof possibleElement !== "undefined") {
-          theta.push(props.dates[i].date);
+          theta.push(dates[i][1].date);
           r.push(possibleElement);
         }
       }
@@ -203,7 +206,7 @@ function HistoriesMain(props) {
   }
 
   function parseHeatData(name) {
-    let options = props.dates[props.dates.length-1].trackers.find(function(element) {
+    let options = dates[dates.length-1][1].trackers.find(function(element) {
       if (element.type === "heat" && element.name === name) {
         return element;
       }
@@ -214,13 +217,13 @@ function HistoriesMain(props) {
     options.forEach((key, i) => dict[key] = colorsOptions[i]);
     let labels = [];
     let colors = [];
-    for(let i=props.dates.length - 1; i>=props.dates.length - 8; i--) {
+    for(let i=dates.length - 1; i>=dates.length - 8; i--) {
       let labelsSingle = [];
       let colorsSingle = [];
       if(i <  0) {
         break;
       } else {
-        let possibleElement = props.dates[i].trackers.find(function(element) {
+        let possibleElement = dates[i][1].trackers.find(function(element) {
           if (element.type === "heat" && element.name === name) {
             return element;
           }
@@ -297,11 +300,11 @@ function HistoriesMain(props) {
 
   function parseWordCloudData(name) {
     let wordbag = [];
-    for(let i=props.dates.length - 1; i>=props.dates.length - 8; i--) {
+    for(let i=dates.length - 1; i>=dates.length - 8; i--) {
       if(i <  0) {
         break;
       } else {
-        let possibleElement = props.dates[i].trackers.find(function(element) {
+        let possibleElement = dates[i][1].trackers.find(function(element) {
           if (element.type === "wordcloud" && element.name === name) {
             return element;
           }
@@ -328,8 +331,8 @@ function HistoriesMain(props) {
 
   function makeHistories() {
     let histories = [];
-    if(props.dates.length > 0) {
-      let lastDay = props.dates[props.dates.length -1].trackers;
+    if(dates.length > 0) {
+      let lastDay = dates[dates.length -1][1].trackers;
       for(let i=0; i< lastDay.length; i++) {
         if (lastDay[i].type === "pie") {
           histories.push(makePieChart(lastDay[i].name));
