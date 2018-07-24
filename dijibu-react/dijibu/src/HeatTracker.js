@@ -1,6 +1,12 @@
 import React from 'react';
+import HeatTrackerTile from './HeatTrackerTile';
 
 function HeatTracker(props) {
+
+  function heatChange(newHeatTiles) {
+    props.trackerChange(newHeatTiles, props.trackerId, props.tracker.type, props.date, props.defaultInfo);
+  }
+
   return (
     <div className="activity-tracker tracker-tile">
       <style>{`
@@ -24,33 +30,7 @@ function HeatTracker(props) {
           display: flex;
         }
 
-        .hour-tile {
-          position: relative;
-        }
 
-        .hour-tile h3{
-          background-color: #092E46;
-          border-radius: 3px;
-          color: white;
-          font-size: 300%;
-          height: 80px;
-          margin-left: 20px;
-          text-align: center;
-          width: 80px;
-        }
-
-        .hour-info {
-          top: 0;
-          left: 20px;
-          font-size: 14px;
-          position: absolute;
-          color: #092E46;
-          display: none;
-        }
-
-        .hour-tile:hover .hour-info{
-          display: block;
-        }
       `}</style>
       {Object.keys(props.tracker.value).map(function(hourTile){
         let options = props.tracker.options;
@@ -63,11 +43,25 @@ function HeatTracker(props) {
           backgroundColor: dict[props.tracker.value[hourTile]],
           color: fontColor
         }
+
+        function heatTileChange() {
+          let newHeatTiles = props.tracker.value.slice();
+          let newValueIndex = props.tracker.options.indexOf(props.tracker.value[hourTile]);
+          if (newValueIndex === props.tracker.options.length-1) {
+            newValueIndex = 0;
+          } else {
+            newValueIndex += 1;
+          }
+          newHeatTiles[hourTile] = props.tracker.options[newValueIndex];
+          heatChange(newHeatTiles);
+        }
+
         return (
-          <div className="hour-tile" key={hourTile}>
-            <h3 style={bgStyle}>{parseInt(hourTile) + 1}</h3>
-            <p className="hour-info">{props.tracker.value[hourTile]}</p>
-          </div>
+          <HeatTrackerTile
+            hourTile={hourTile}
+            hourValue={props.tracker.value[hourTile]}
+            bgStyle = {bgStyle}
+            onTileChange = {heatTileChange}/>
         );
       })}
     </div>

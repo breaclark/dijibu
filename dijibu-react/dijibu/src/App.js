@@ -86,7 +86,7 @@ class App extends React.Component {
       console.log(newInfo);
       trackerRef.set(newInfo);
     } else if (trackerType === "heat") {
-      //this will need to be at a specific index
+      trackerRef.set(newInfo);
     } else if (trackerType === "wordcloud") {
       trackerRef.push(newInfo);
     }
