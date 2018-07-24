@@ -1,7 +1,6 @@
 import React from 'react';
 
 function CountTracker(props) {
-  console.log(props.tracker);
   return (
     <div className="count-tracker tracker-tile">
       <style>{`

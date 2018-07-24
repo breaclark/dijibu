@@ -1,7 +1,6 @@
 import React from 'react';
 
 function BooleanTracker(props) {
-  console.log(props.tracker);
   let starArea = props.tracker.value ?
     <div className="star"></div>
     : <div></div>

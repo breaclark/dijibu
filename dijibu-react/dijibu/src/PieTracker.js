@@ -1,7 +1,6 @@
 import React from 'react';
 
 function PieTracker(props) {
-  console.log(props.tracker);
   return(
     <div className="multi-tracker tracker-tile">
       <style>{`

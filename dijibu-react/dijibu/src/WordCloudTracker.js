@@ -1,7 +1,7 @@
 import React from 'react';
+import WordCloudTrackerItem from './WordCloudTrackerItem';
 
 function WordCloudTracker(props) {
-  console.log(props.tracker);
   return (
     <div className="text-tracker tracker-tile">
       <style>{`
@@ -15,30 +15,34 @@ function WordCloudTracker(props) {
           grid-column: span 2;
           grid-row: span 3;
           padding: 40px;
+          min-width: 200px;
+          overflow-y: scroll;
         }
 
-        .text-tracker hr {
-          border: 1px solid white;
-          margin-right: 6%;
-          margin-bottom: 30px;
-          margin-left: 6%;
+        .text-tracker input {
+          height: 20px;
+          background-color: transparent;
+          border: 3px solid #DA6257;
+          color: white;
+        }
+
+        .text-tracker button {
+          height: 27px;
+          background-color: transparent;
+          border: 3px solid #DA6257;
+          color: white;
+          margin-left: 20px;
         }
       `}</style>
-        <hr noshade="true" />
-        <hr noshade="true" />
-        <hr noshade="true" />
-        <hr noshade="true" />
-        <hr noshade="true" />
-        <hr noshade="true" />
-        <hr noshade="true" />
-        <hr noshade="true" />
-        <hr noshade="true" />
-        <hr noshade="true" />
-        <hr noshade="true" />
-        <hr noshade="true" />
-        <hr noshade="true" />
-        <hr noshade="true" />
-        <hr noshade="true" />
+    {Object.keys(props.tracker.value).map(function(lineValue){
+      return (
+        <WordCloudTrackerItem lineValue={props.tracker.value[lineValue]} key={lineValue}/>
+      );
+    })}
+    <form>
+      <input />
+      <button type="submit">Add</button>
+    </form>
     </div>
   );
 }

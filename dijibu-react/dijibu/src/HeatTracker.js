@@ -1,7 +1,6 @@
 import React from 'react';
 
 function HeatTracker(props) {
-  console.log(props.tracker);
   return (
     <div className="activity-tracker tracker-tile">
       <style>{`
