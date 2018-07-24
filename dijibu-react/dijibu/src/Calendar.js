@@ -24,7 +24,7 @@ class Calendar extends React.Component {
 
   renderSingleDay(dayNum) {
     return(
-      <Day wholeDate={this.state.date}  dates={this.state.dates} key={v4()} date={dayNum} />
+      <Day onDateClick = {this.props.onDateClick} wholeDate={this.state.date}  dates={this.state.dates} key={v4()} date={dayNum} />
     );
   }
 

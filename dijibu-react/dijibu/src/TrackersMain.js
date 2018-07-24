@@ -7,7 +7,6 @@ import BooleanTracker from './BooleanTracker';
 import CountTracker from './CountTracker';
 
 function TrackersMain(props) {
-
     let requestedDate = dateFns.format(props.date, 'MMMM D, YYYY');
     let requestedDatesTrackers;
     for(let i=0; i<props.dates.length; i++) {
@@ -64,9 +63,7 @@ function TrackersMain(props) {
             );
           })}
         </div>
-        {/*// Should be able to get the date from the calendar as well
-        // Then render and send appropriate data for each date
-        // Only let trackers be changed if the date is today (later)*/}
+        {/*// Only let trackers be changed if the date is today (later)*/}
       </div>
     );
 }

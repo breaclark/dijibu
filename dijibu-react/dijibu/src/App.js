@@ -21,6 +21,7 @@ class App extends React.Component {
       user: null,
       date: new Date(),
     };
+    this.handleDateChange = this.handleDateChange.bind(this);
   }
 
   componentDidMount() {
@@ -34,6 +35,12 @@ class App extends React.Component {
           user: userData
         });
       });
+  }
+
+  handleDateChange(newDate) {
+    this.setState({
+      date: newDate
+    });
   }
 
 // Once data is in firebase, will need to translate into charts here
@@ -52,6 +59,7 @@ class App extends React.Component {
                 dates={this.state.user.dates}
                 date={this.state.date}/>}/>
             <Route path='/calendar' render={()=><Calendar
+                onDateClick={this.handleDateChange}
                 dates={this.state.user.dates}
                 date={this.state.date}/> }/>
             <Route path='/histories' render={()=><HistoriesMain
