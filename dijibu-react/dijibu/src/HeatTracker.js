@@ -58,6 +58,7 @@ function HeatTracker(props) {
 
         return (
           <HeatTrackerTile
+            key={hourTile}
             hourTile={hourTile}
             hourValue={props.tracker.value[hourTile]}
             bgStyle = {bgStyle}

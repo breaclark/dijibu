@@ -1,7 +1,6 @@
 import React from 'react';
 import Day from './Day';
 import dateFns from "date-fns";
-import { v4 } from 'uuid';
 
 class Calendar extends React.Component {
   constructor(props) {

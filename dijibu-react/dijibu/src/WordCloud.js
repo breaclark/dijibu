@@ -2,12 +2,9 @@ import { Component } from 'react';
 import PropTypes from 'prop-types';
 import ReactFauxDom from 'react-faux-dom';
 import { select } from 'd3-selection';
-import { scaleOrdinal, schemeCategory10 } from 'd3-scale';
 import cloud from 'd3-cloud';
 
 const defaultFontSizeMapper = word => word.value;
-
-const fill = scaleOrdinal(schemeCategory10);
 
 const defaultClickEvent = word => {
   // eslint-disable-next-line no-console

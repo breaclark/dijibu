@@ -8,6 +8,7 @@ function HistoriesMain(props) {
       if (element.type === "pie" && element.name === name) {
         return element;
       }
+      return false;
     }).options;
     let colorsOptions = ["#DA6257", "#092e46", "#738678", "#e99259", "#f6d1b9", "#d7d7d7", "ffffff"];
     let dict = {};
@@ -22,6 +23,7 @@ function HistoriesMain(props) {
           if (element.type === "pie" && element.name === name) {
             return element;
           }
+          return false;
         }).value;
         if (typeof possibleElement !== "undefined") {
           labels.push(possibleElement);
@@ -76,6 +78,7 @@ function HistoriesMain(props) {
           if (element.type === "boolean" && element.name === name) {
             return element;
           }
+          return false;
         }).value;
         if (typeof possibleElement !== "undefined") {
           let colorResult = "#FFFFFF";
@@ -137,6 +140,7 @@ function HistoriesMain(props) {
           if (element.type === "count" && element.name === name) {
             return element;
           }
+          return false;
         }).value;
         if (typeof possibleElement !== "undefined") {
           theta.push(props.dates[i].date);
@@ -203,6 +207,7 @@ function HistoriesMain(props) {
       if (element.type === "heat" && element.name === name) {
         return element;
       }
+      return false;
     }).options;
     let colorsOptions = ["#ffffff", "#DA6257", "#092e46", "#738678", "#e99259", "#f6d1b9", "#d7d7d7", "#c9e6d1", "#0f527d"];
     let dict = {};
@@ -219,6 +224,7 @@ function HistoriesMain(props) {
           if (element.type === "heat" && element.name === name) {
             return element;
           }
+          return false;
         }).value;
         if (typeof possibleElement !== "undefined") {
           for (let i=0; i<possibleElement.length; i++) {
@@ -277,7 +283,7 @@ function HistoriesMain(props) {
     let dict = new Map();
     for(let i=0; i< startArray.length; i++) {
       if (dict.has(startArray[i])) {
-        dict.set(startArray[i], parseInt(dict.get(startArray[i])) + 1);
+        dict.set(startArray[i], Number(dict.get(startArray[i])) + 1);
       } else {
         dict.set(startArray[i], 1);
       }
@@ -299,6 +305,7 @@ function HistoriesMain(props) {
           if (element.type === "wordcloud" && element.name === name) {
             return element;
           }
+          return false;
         }).value;
         if (typeof possibleElement !== "undefined") {
           wordbag = wordbag.concat(possibleElement);

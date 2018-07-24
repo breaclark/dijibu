@@ -32,7 +32,7 @@ function HeatTrackerTile (props) {
           display: block;
         }
       `}</style>
-    <h3 style={props.bgStyle}>{parseInt(props.hourTile) + 1}</h3>
+    <h3 style={props.bgStyle}>{Number(props.hourTile) + 1}</h3>
       <p className="hour-info">{props.hourValue}</p>
     </div>
   );

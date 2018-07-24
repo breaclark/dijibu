@@ -1,7 +1,5 @@
 import React from 'react';
-import TrackersMain from './TrackersMain';
 import { Link } from 'react-router-dom';
-import dateFns from "date-fns";
 
 function Day(props) {
 

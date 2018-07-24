@@ -1,7 +1,7 @@
 import React from 'react';
 
 function CountTracker(props) {
-  let inputValue = parseInt(props.tracker.value);
+  let inputValue = Number(props.tracker.value);
 
   function countChange() {
     props.trackerChange(inputValue.value, props.trackerId, props.tracker.type, props.date, props.defaultInfo);
