@@ -1,6 +1,12 @@
 import React from 'react';
 
 function CountTracker(props) {
+  let inputValue = parseInt(props.tracker.value);
+
+  function countChange() {
+    props.trackerChange(inputValue.value, props.trackerId, props.tracker.type, props.date, props.defaultInfo);
+  }
+
   return (
     <div className="count-tracker tracker-tile">
       <style>{`
@@ -48,7 +54,7 @@ function CountTracker(props) {
           width: 60%;
         }
       `}</style>
-    <input type="number" className="count-select-box" defaultValue={parseInt(props.tracker.value)} />
+    <input type="number" className="count-select-box" onChange={countChange} value={inputValue} ref={(input) => {inputValue = input;}}/>
     </div>
   );
 }

@@ -83,6 +83,7 @@ class App extends React.Component {
     } else if (trackerType === "pie") {
       trackerRef.set(newInfo);
     } else if (trackerType === "count") {
+      console.log(newInfo);
       trackerRef.set(newInfo);
     } else if (trackerType === "heat") {
       //this will need to be at a specific index

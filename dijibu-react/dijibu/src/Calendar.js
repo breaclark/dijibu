@@ -23,7 +23,7 @@ class Calendar extends React.Component {
   }
 
   renderSingleDay(dayNum) {
-    let dayDate = new Date(dateFns.getYear(this.state.date), dateFns.getMonth(this.state.date), dayNum);
+    let dayDate = dateFns.startOfDay(new Date(dateFns.getYear(this.state.date), dateFns.getMonth(this.state.date), dayNum));
     return(
       <Day onDateClick = {this.props.onDateClick} wholeDate={this.state.date} dates={this.state.dates} key={dayDate} id={dayDate} date={dayNum} />
     );
