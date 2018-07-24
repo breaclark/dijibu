@@ -39,45 +39,45 @@ class App extends React.Component {
       });
   }
 
-  handleDateChange(newDate, newDateId) {
+  handleDateChange(newDate) {
     this.setState({
-      date: newDate,
-      dateId: newDateId
+      date: newDate
     });
   }
 
   handleTrackerChange(newInfo, trackerId, trackerType, date, defaultInfo) {
     if(defaultInfo) {
-      firebase.database().ref(`users/0/dates/${this.state.dateId}/date`).set(date);
-      firebase.database().ref(`users/0/dates/${this.state.dateId}/trackers`).set([
-      { "name" : "Mood",
-        "type" : "pie",
-        "options" : ["Happy", "Frustrated", "Moody", "Sad", "Thoughtful"],
-        "value" : "Happy"
-      },
-      { "name" : "Purchase",
-        "type" : "wordcloud",
-        "options" : [],
-        "value" : ["milk", "orange juice", "bread"]
-      },
-      { "name" : "Activity",
-        "type" : "heat",
-        "options" : ["", "Sleeping", "Driving", "Cooking", "Exercising", "Watching TV", "Reading", "Shopping", "Working"],
-        "value" : ["Sleeping", "Sleeping", "", "Sleeping", "", "", "Sleeping", "Sleeping", "Cooking", "Driving", "Working", "Working", "Working", "Working", "Working", "Working", "", "", "Driving", "Cooking", "Watching TV", "Watching TV", "Exercising", "Reading"]
-      },
-      { "name" : "Exercise",
-        "type" : "boolean",
-        "options" : [],
-        "value" : true
-      },
-      { "name" : "Money Spent",
-        "type" : "count",
-        "options" : [],
-        "value" : 33
-      }
-      ]);
+      firebase.database().ref(`users/0/dates/${this.state.date}`).set({
+        date: String(date),
+        trackers: [
+        { "name" : "Mood",
+          "type" : "pie",
+          "options" : ["Happy", "Frustrated", "Moody", "Sad", "Thoughtful"],
+          "value" : "Happy"
+        },
+        { "name" : "Purchase",
+          "type" : "wordcloud",
+          "options" : [],
+          "value" : ["milk", "orange juice", "bread"]
+        },
+        { "name" : "Activity",
+          "type" : "heat",
+          "options" : ["", "Sleeping", "Driving", "Cooking", "Exercising", "Watching TV", "Reading", "Shopping", "Working"],
+          "value" : ["Sleeping", "Sleeping", "", "Sleeping", "", "", "Sleeping", "Sleeping", "Cooking", "Driving", "Working", "Working", "Working", "Working", "Working", "Working", "", "", "Driving", "Cooking", "Watching TV", "Watching TV", "Exercising", "Reading"]
+        },
+        { "name" : "Exercise",
+          "type" : "boolean",
+          "options" : [],
+          "value" : true
+        },
+        { "name" : "Money Spent",
+          "type" : "count",
+          "options" : [],
+          "value" : 33
+        }
+      ]});
     }
-    const trackerRef = firebase.database().ref(`users/0/dates/${this.state.dateId}/trackers/${trackerId}/value`);
+    const trackerRef = firebase.database().ref(`users/0/dates/${this.state.date}/trackers/${trackerId}/value`);
     if (trackerType === "boolean") {
       trackerRef.set(newInfo);
     }
@@ -102,8 +102,7 @@ class App extends React.Component {
             <Route exact path='/trackers' render={()=><TrackersMain
                 onTrackerChange = {this.handleTrackerChange}
                 dates={this.state.user.dates}
-                date={this.state.date}
-                dateId = {this.state.dateId}/>}/>
+                date={this.state.date}/>}/>
               <Route exact path='/' render={()=><Calendar
                 onDateClick={this.handleDateChange}
                 dates={this.state.user.dates}

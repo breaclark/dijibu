@@ -10,8 +10,8 @@ function TrackersMain(props) {
     let defaultInfo = false;
     let requestedDate = dateFns.format(props.date, 'MMMM D, YYYY');
     let requestedDatesTrackers;
-    if(props.dates[props.dateId]) {
-      requestedDatesTrackers = props.dates[props.dateId].trackers;
+    if(props.dates[props.date]) {
+      requestedDatesTrackers = props.dates[props.date].trackers;
     } else {
       defaultInfo = true;
       requestedDatesTrackers = [

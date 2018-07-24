@@ -5,9 +5,8 @@ import dateFns from "date-fns";
 
 function Day(props) {
 
-  let dayDate = new Date(dateFns.getYear(props.wholeDate), dateFns.getMonth(props.wholeDate),props.date);
   function dateClick() {
-    props.onDateClick(dayDate, props.id);
+    props.onDateClick(props.id);
   }
 
   return (

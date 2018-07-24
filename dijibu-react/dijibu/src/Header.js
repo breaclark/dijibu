@@ -88,7 +88,6 @@ function Header() {
             </div>
             <div className="menu-back">
               <div className="menu">
-                <Link className="link" to="/trackers">Trackers</Link>
                 <Link className="link" to="/">Calendar</Link>
                 <Link className="link" to="/edit">Edit Trackers</Link>
                 <Link className="link" to="/histories">Histories</Link>
