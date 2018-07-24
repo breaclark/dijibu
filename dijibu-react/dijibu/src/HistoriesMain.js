@@ -4,8 +4,7 @@ import History from './History';
 function HistoriesMain(props) {
 
   let dates = Object.entries(props.dates);
-  console.log(dates);
-
+  
   function parsePieData(name) {
     let options = dates[dates.length-1][1].trackers.find(function(element) {
       if (element.type === "pie" && element.name === name) {
