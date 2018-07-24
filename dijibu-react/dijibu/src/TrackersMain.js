@@ -9,11 +9,7 @@ import CountTracker from './CountTracker';
 function TrackersMain(props) {
     let requestedDate = dateFns.format(props.date, 'MMMM D, YYYY');
     let requestedDatesTrackers;
-    for(let i=0; i<props.dates.length; i++) {
-      if (dateFns.format(props.dates[i].date, 'MMMM D, YYYY') === requestedDate){
-        requestedDatesTrackers = props.dates[i].trackers;
-      }
-    }
+    requestedDatesTrackers = props.dates[props.dateKey].trackers;
     return (
       <div>
         <style>{`
@@ -35,27 +31,37 @@ function TrackersMain(props) {
             const tracker = requestedDatesTrackers[trackerId];
             if (tracker.type === 'pie') {
               return <PieTracker
+                trackerChange={props.onTrackerChange}
                 trackerId={trackerId}
+                datekey ={props.datekey}
                 key={trackerId}
                 tracker={tracker} />
             } else if (tracker.type === 'wordcloud') {
               return <WordCloudTracker
+                trackerChange={props.onTrackerChange}
                 trackerId={trackerId}
+                datekey ={props.datekey}
                 key={trackerId}
                 tracker={tracker} />
             } else if (tracker.type === 'heat') {
               return <HeatTracker
+                trackerChange={props.onTrackerChange}
                 trackerId={trackerId}
+                datekey ={props.datekey}
                 key={trackerId}
                 tracker={tracker} />
             } else if (tracker.type === 'boolean') {
               return <BooleanTracker
+                trackerChange={props.onTrackerChange}
                 trackerId={trackerId}
+                datekey ={props.datekey}
                 key={trackerId}
                 tracker={tracker} />
             } else if (tracker.type === 'count') {
               return <CountTracker
+                trackerChange={props.onTrackerChange}
                 trackerId={trackerId}
+                datekey ={props.datekey}
                 key={trackerId}
                 tracker={tracker} />
             } else return (

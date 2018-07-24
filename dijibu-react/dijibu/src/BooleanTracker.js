@@ -5,8 +5,13 @@ function BooleanTracker(props) {
     <div className="star"></div>
     : <div></div>
 
+
+  function booleanChange() {
+    props.trackerChange(!props.tracker.value, props.trackerId, props.tracker.type, props.datekey);
+  }
+
   return (
-    <div className="boolean-tracker tracker-tile">
+    <div className="boolean-tracker tracker-tile" onClick={booleanChange}>
       <style>{`
         .tracker-tile {
           border-radius: 3px;

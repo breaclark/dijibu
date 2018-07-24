@@ -13,7 +13,7 @@ function Day(props) {
 
   return (
     <div>
-      <Link to='/' onClick = {dateClick} ><h1>{props.date}</h1></Link>
+      <Link to='/trackers' datekey={props.id} onClick = {dateClick} ><h1>{props.date}</h1></Link>
     </div>
   );
 }

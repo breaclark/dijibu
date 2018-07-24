@@ -22,6 +22,7 @@ class App extends React.Component {
       date: new Date(),
     };
     this.handleDateChange = this.handleDateChange.bind(this);
+    this.handleTrackerChange = this.handleTrackerChange.bind(this);
   }
 
   componentDidMount() {
@@ -43,6 +44,17 @@ class App extends React.Component {
     });
   }
 
+  handleTrackerChange(newInfo, trackerId, trackerType, datekey) {
+    console.log(newInfo);
+    const trackerRef = firebase.database().ref('users/0/dates/${dateKey}/trackers/trackerId');
+    if (trackerType === "boolean") {
+      trackerRef.set({
+        value: newInfo
+      });
+    }
+    this.componentDidMount();
+  }
+
   render() {
     if (this.state.user) {
       return (
@@ -50,10 +62,11 @@ class App extends React.Component {
           <Header />
           <Switch>
             <Route exact path='/signIn' render={()=><SignIn />}/>
-            <Route exact path='/' render={()=><TrackersMain
+            <Route exact path='/trackers' render={()=><TrackersMain
+                onTrackerChange = {this.handleTrackerChange}
                 dates={this.state.user.dates}
                 date={this.state.date}/>}/>
-            <Route path='/calendar' render={()=><Calendar
+            <Route path='/' render={()=><Calendar
                 onDateClick={this.handleDateChange}
                 dates={this.state.user.dates}
                 date={this.state.date}/> }/>
