@@ -104,15 +104,15 @@ class App extends React.Component {
                 dates={this.state.user.dates}
                 date={this.state.date}
                 dateId = {this.state.dateId}/>}/>
-            <Route path='/' render={()=><Calendar
+              <Route exact path='/' render={()=><Calendar
                 onDateClick={this.handleDateChange}
                 dates={this.state.user.dates}
                 date={this.state.date}/> }/>
-            <Route path='/histories' render={()=><HistoriesMain
+              <Route exact path='/histories' render={()=><HistoriesMain
                 dates={this.state.user.dates} /> }/>
-            <Route path='/edit' render={()=><EditTrackers /> }/>
-            <Route path='/new' render={()=><NewTracker /> }/>
-            <Route path='/delete' render={()=><DeleteTracker /> }/>
+            <Route exact path='/edit' render={()=><EditTrackers /> }/>
+            <Route exact path='/new' render={()=><NewTracker /> }/>
+            <Route exact path='/delete' render={()=><DeleteTracker /> }/>
             <Route component={Error404} />
           </Switch>
         </div>
