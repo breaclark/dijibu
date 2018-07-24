@@ -44,15 +44,51 @@ class App extends React.Component {
     });
   }
 
-  handleTrackerChange(newInfo, trackerId, trackerType, datekey) {
-    console.log(newInfo);
-    const trackerRef = firebase.database().ref('users/0/dates/${dateKey}/trackers/trackerId');
-    if (trackerType === "boolean") {
-      trackerRef.set({
-        value: newInfo
-      });
+  handleTrackerChange(newInfo, trackerId, trackerType, date, datekey, defaultInfo) {
+    if(defaultInfo) {
+      firebase.database().ref(`users/0/dates/${datekey}/date`).set(date);
+      firebase.database().ref(`users/0/dates/${datekey}/trackers`).set([
+      { "name" : "Mood",
+        "type" : "pie",
+        "options" : ["Happy", "Frustrated", "Moody", "Sad", "Thoughtful"],
+        "value" : "Happy"
+      },
+      { "name" : "Purchase",
+        "type" : "wordcloud",
+        "options" : [],
+        "value" : ["milk", "orange juice", "bread"]
+      },
+      { "name" : "Activity",
+        "type" : "heat",
+        "options" : ["", "Sleeping", "Driving", "Cooking", "Exercising", "Watching TV", "Reading", "Shopping", "Working"],
+        "value" : ["Sleeping", "Sleeping", "", "Sleeping", "", "", "Sleeping", "Sleeping", "Cooking", "Driving", "Working", "Working", "Working", "Working", "Working", "Working", "", "", "Driving", "Cooking", "Watching TV", "Watching TV", "Exercising", "Reading"]
+      },
+      { "name" : "Exercise",
+        "type" : "boolean",
+        "options" : [],
+        "value" : true
+      },
+      { "name" : "Money Spent",
+        "type" : "count",
+        "options" : [],
+        "value" : 33
+      }
+      ]);
     }
-    this.componentDidMount();
+    const trackerRef = firebase.database().ref(`users/0/dates/${datekey}/trackers/${trackerId}/value`);
+    console.log(trackerRef);
+    if (trackerType === "boolean") {
+      trackerRef.set(newInfo);
+    }
+    const ref = firebase.database().ref('users');
+    let userData;
+    ref.once("value")
+      .then((snapshot) => {
+        userData = JSON.parse(JSON.stringify(snapshot.child("0").val()));
+        this.setState({
+          user: userData
+        });
+      });
   }
 
   render() {

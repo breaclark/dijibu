@@ -7,9 +7,42 @@ import BooleanTracker from './BooleanTracker';
 import CountTracker from './CountTracker';
 
 function TrackersMain(props) {
+    let defaultInfo = false;
     let requestedDate = dateFns.format(props.date, 'MMMM D, YYYY');
     let requestedDatesTrackers;
-    requestedDatesTrackers = props.dates[props.dateKey].trackers;
+    if(props.dates[props.dateKey]) {
+      requestedDatesTrackers = props.dates[props.dateKey].trackers;
+    } else {
+      defaultInfo = true;
+      requestedDatesTrackers = [
+      { "name" : "Mood",
+        "type" : "pie",
+        "options" : ["Happy", "Frustrated", "Moody", "Sad", "Thoughtful"],
+        "value" : "Happy"
+      },
+      { "name" : "Purchase",
+        "type" : "wordcloud",
+        "options" : [],
+        "value" : ["milk", "orange juice", "bread"]
+      },
+      { "name" : "Activity",
+        "type" : "heat",
+        "options" : ["", "Sleeping", "Driving", "Cooking", "Exercising", "Watching TV", "Reading", "Shopping", "Working"],
+        "value" : ["Sleeping", "Sleeping", "", "Sleeping", "", "", "Sleeping", "Sleeping", "Cooking", "Driving", "Working", "Working", "Working", "Working", "Working", "Working", "", "", "Driving", "Cooking", "Watching TV", "Watching TV", "Exercising", "Reading"]
+      },
+      { "name" : "Exercise",
+        "type" : "boolean",
+        "options" : [],
+        "value" : true
+      },
+      { "name" : "Money Spent",
+        "type" : "count",
+        "options" : [],
+        "value" : 33
+      }
+      ];
+    }
+
     return (
       <div>
         <style>{`
@@ -34,6 +67,8 @@ function TrackersMain(props) {
                 trackerChange={props.onTrackerChange}
                 trackerId={trackerId}
                 datekey ={props.datekey}
+                date={props.date}
+                defaultInfo = {defaultInfo}
                 key={trackerId}
                 tracker={tracker} />
             } else if (tracker.type === 'wordcloud') {
@@ -41,6 +76,8 @@ function TrackersMain(props) {
                 trackerChange={props.onTrackerChange}
                 trackerId={trackerId}
                 datekey ={props.datekey}
+                date={props.date}
+                defaultInfo = {defaultInfo}
                 key={trackerId}
                 tracker={tracker} />
             } else if (tracker.type === 'heat') {
@@ -48,6 +85,8 @@ function TrackersMain(props) {
                 trackerChange={props.onTrackerChange}
                 trackerId={trackerId}
                 datekey ={props.datekey}
+                date={props.date}
+                defaultInfo = {defaultInfo}
                 key={trackerId}
                 tracker={tracker} />
             } else if (tracker.type === 'boolean') {
@@ -55,6 +94,8 @@ function TrackersMain(props) {
                 trackerChange={props.onTrackerChange}
                 trackerId={trackerId}
                 datekey ={props.datekey}
+                date={props.date}
+                defaultInfo = {defaultInfo}
                 key={trackerId}
                 tracker={tracker} />
             } else if (tracker.type === 'count') {
@@ -62,10 +103,13 @@ function TrackersMain(props) {
                 trackerChange={props.onTrackerChange}
                 trackerId={trackerId}
                 datekey ={props.datekey}
+                date={props.date}
+                defaultInfo = {defaultInfo}
                 key={trackerId}
                 tracker={tracker} />
             } else return (
-              <div></div>
+              <div key={trackerId}>
+              </div>
             );
           })}
         </div>
