@@ -1,6 +1,7 @@
 import React from 'react';
 
 function PieTracker(props) {
+  console.log(props.tracker);
   return(
     <div className="multi-tracker tracker-tile">
       <style>{`
@@ -24,10 +25,7 @@ function PieTracker(props) {
           font-size: 2vw;
         }
       `}</style>
-        <p>{props.tracker.name} - {props.tracker.value} <br />
-        (tap to change)</p>
-      {/*}// add in a function to change this
-      // might want to make these into different components?*/}
+        <p>{props.tracker.value}</p>
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 
 function WordCloudTracker(props) {
+  console.log(props.tracker);
   return (
     <div className="text-tracker tracker-tile">
       <style>{`
@@ -8,7 +9,7 @@ function WordCloudTracker(props) {
           border-radius: 3px;
           position: relative;
         }
-        
+
         .text-tracker {
           background-color: #E99259;
           grid-column: span 2;

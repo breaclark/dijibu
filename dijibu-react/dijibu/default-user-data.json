@@ -16,8 +16,8 @@
         },
         { "name" : "Activity",
           "type" : "heat",
-          "options" : ["Sleeping", "Driving", "Cooking", "Exercising", "Watching TV", "Reading", "Shopping", "Working"],
-          "value" : ["Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Cooking", "Driving", "Working", "Working", "Working", "Working", "Working", "Working", "Working", "Working", "Driving", "Cooking", "Watching TV", "Watching TV", "Exercising", "Reading"]
+          "options" : ["", "Sleeping", "Driving", "Cooking", "Exercising", "Watching TV", "Reading", "Shopping", "Working"],
+          "value" : ["Sleeping", "Sleeping", "", "Sleeping", "", "", "Sleeping", "Sleeping", "Cooking", "Driving", "Working", "Working", "Working", "Working", "Working", "Working", "", "", "Driving", "Cooking", "Watching TV", "Watching TV", "Exercising", "Reading"]
         },
         { "name" : "Exercise",
           "type" : "boolean",
@@ -44,8 +44,8 @@
         },
         { "name" : "Activity",
           "type" : "heat",
-          "options" : ["Sleeping", "Driving", "Cooking", "Exercising", "Watching TV", "Reading", "Shopping", "Working"],
-          "value" : ["Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Cooking", "Driving", "Working", "Working", "Working", "Working", "Working", "Working", "Working", "Working", "Driving", "Watching TV", "Watching TV", "Watching TV", "Reading", "Reading", "Sleeping"]
+          "options" : ["", "Sleeping", "Driving", "Cooking", "Exercising", "Watching TV", "Reading", "Shopping", "Working"],
+          "value" : ["Sleeping", "Sleeping", "Sleeping", "", "Sleeping", "Sleeping", "Sleeping", "Cooking", "Driving", "Working", "Working", "Working", "", "", "Working", "Working", "Working", "Driving", "Watching TV", "Watching TV", "Watching TV", "", "Reading", "Sleeping"]
         },
         { "name" : "Exercise",
           "type" : "boolean",
@@ -72,8 +72,8 @@
         },
         { "name" : "Activity",
           "type" : "heat",
-          "options" : ["Sleeping", "Driving", "Cooking", "Exercising", "Watching TV", "Reading", "Shopping", "Working"],
-          "value" : ["Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Cooking", "Driving", "Working", "Working", "Working", "Working", "Working", "Working", "Working", "Working", "Driving", "Cooking", "Watching TV", "Watching TV", "Exercising", "Reading"]
+          "options" : ["", "Sleeping", "Driving", "Cooking", "Exercising", "Watching TV", "Reading", "Shopping", "Working"],
+          "value" : ["Sleeping", "Sleeping", "Sleeping", "", "", "Sleeping", "", "Sleeping", "Cooking", "Driving", "Working", "Working", "Working", "Working", "Working", "", "Working", "Working", "Driving", "", "Watching TV", "Watching TV", "Exercising", "Reading"]
         },
         { "name" : "Exercise",
           "type" : "boolean",
@@ -100,8 +100,8 @@
         },
         { "name" : "Activity",
           "type" : "heat",
-          "options" : ["Sleeping", "Driving", "Cooking", "Exercising", "Watching TV", "Reading", "Shopping", "Working"],
-          "value" : ["Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Cooking", "Driving", "Working", "Working", "Working", "Working", "Working", "Working", "Working", "Working", "Driving", "Cooking", "Watching TV", "Watching TV", "Watching TV", "Reading", "Sleeping", "Sleeping"]
+          "options" : ["", "Sleeping", "Driving", "Cooking", "Exercising", "Watching TV", "Reading", "Shopping", "Working"],
+          "value" : ["Sleeping", "", "", "Sleeping", "Sleeping", "Sleeping", "Cooking", "Driving", "", "", "Working", "Working", "Working", "Working", "Working", "Working", "Driving", "Cooking", "Watching TV", "Watching TV", "Watching TV", "", "Sleeping", "Sleeping"]
         },
         { "name" : "Exercise",
           "type" : "boolean",
@@ -128,8 +128,8 @@
         },
         { "name" : "Activity",
           "type" : "heat",
-          "options" : ["Sleeping", "Driving", "Cooking", "Exercising", "Watching TV", "Reading", "Shopping", "Working"],
-          "value" : ["Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Cooking", "Driving", "Shopping", "Shopping", "Shopping", "Sleeping", "Cooking", "Reading", "Watching TV", "Watching TV", "Driving", "Cooking", "Watching TV", "Watching TV", "Exercising", "Reading"]
+          "options" : ["", "Sleeping", "Driving", "Cooking", "Exercising", "Watching TV", "Reading", "Shopping", "Working"],
+          "value" : ["Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "", "", "Cooking", "Driving", "Shopping", "Shopping", "Shopping", "Sleeping", "Cooking", "Reading", "Watching TV", "Watching TV", "Driving", "Cooking", "Watching TV", "Watching TV", "Exercising", ""]
         },
         { "name" : "Exercise",
           "type" : "boolean",
@@ -156,8 +156,8 @@
         },
         { "name" : "Activity",
           "type" : "heat",
-          "options" : ["Sleeping", "Driving", "Cooking", "Exercising", "Watching TV", "Reading", "Shopping", "Working"],
-          "value" : ["Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Cooking", "Driving", "Working", "Working", "Working", "Shopping", "Working", "Working", "Working", "Working", "Driving", "Cooking", "Watching TV", "Watching TV", "Reading", "Reading"]
+          "options" : ["", "Sleeping", "Driving", "Cooking", "Exercising", "Watching TV", "Reading", "Shopping", "Working"],
+          "value" : ["Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Cooking", "Driving", "Working", "Working", "Working", "Shopping", "", "", "Working", "Working", "Driving", "Cooking", "Watching TV", "Watching TV", "Reading", "Reading"]
         },
         { "name" : "Exercise",
           "type" : "boolean",
@@ -184,8 +184,8 @@
         },
         { "name" : "Activity",
           "type" : "heat",
-          "options" : ["Sleeping", "Driving", "Cooking", "Exercising", "Watching TV", "Reading", "Shopping", "Working"],
-          "value" : ["Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Cooking", "Driving", "Exercising", "Exercising", "Watching TV", "Watching TV", "Reading", "Watching TV", "Watching TV", "Reading", "Driving", "Cooking", "Watching TV", "Watching TV", "Exercising", "Reading"]
+          "options" : ["", "Sleeping", "Driving", "Cooking", "Exercising", "Watching TV", "Reading", "Shopping", "Working"],
+          "value" : ["Sleeping", "", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "", "", "Cooking", "Driving", "Exercising", "Exercising", "Watching TV", "Watching TV", "Reading", "Watching TV", "", "Reading", "Driving", "Cooking", "Watching TV", "Watching TV", "Exercising", "Reading"]
         },
         { "name" : "Exercise",
           "type" : "boolean",

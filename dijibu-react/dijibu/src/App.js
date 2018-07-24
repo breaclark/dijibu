@@ -43,11 +43,6 @@ class App extends React.Component {
     });
   }
 
-// Once data is in firebase, will need to translate into charts here
-// Might actually do that at the histories main level (so it would take into account new info if necessary)
-// Will also need to add in basic trackers without values when someone signs up (later)
-
-
   render() {
     if (this.state.user) {
       return (

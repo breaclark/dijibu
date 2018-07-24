@@ -63,7 +63,6 @@ function TrackersMain(props) {
             );
           })}
         </div>
-        {/*// Only let trackers be changed if the date is today (later)*/}
       </div>
     );
 }

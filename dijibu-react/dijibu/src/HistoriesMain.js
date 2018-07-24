@@ -204,7 +204,7 @@ function HistoriesMain(props) {
         return element;
       }
     }).options;
-    let colorsOptions = ["#DA6257", "#092e46", "#738678", "#e99259", "#f6d1b9", "#d7d7d7", "#c9e6d1", "#ffffff"];
+    let colorsOptions = ["#ffffff", "#DA6257", "#092e46", "#738678", "#e99259", "#f6d1b9", "#d7d7d7", "#c9e6d1", "#0f527d"];
     let dict = {};
     options.forEach((key, i) => dict[key] = colorsOptions[i]);
     let labels = [];

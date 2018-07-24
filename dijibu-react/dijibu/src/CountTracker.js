@@ -1,6 +1,7 @@
 import React from 'react';
 
 function CountTracker(props) {
+  console.log(props.tracker);
   return (
     <div className="count-tracker tracker-tile">
       <style>{`
@@ -35,6 +36,7 @@ function CountTracker(props) {
           color: white;
           font-size: 20vw;
           min-height: 100px;
+          min-width: 300px;
           width: 40%;
         }
 
@@ -47,7 +49,7 @@ function CountTracker(props) {
           width: 60%;
         }
       `}</style>
-      <input type="number" className="count-select-box" placeholder="16" />
+    <input type="number" className="count-select-box" defaultValue={parseInt(props.tracker.value)} />
     </div>
   );
 }

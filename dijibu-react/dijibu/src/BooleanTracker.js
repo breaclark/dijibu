@@ -1,6 +1,11 @@
 import React from 'react';
 
 function BooleanTracker(props) {
+  console.log(props.tracker);
+  let starArea = props.tracker.value ?
+    <div className="star"></div>
+    : <div></div>
+
   return (
     <div className="boolean-tracker tracker-tile">
       <style>{`
@@ -18,32 +23,21 @@ function BooleanTracker(props) {
 
         .star {
           background: #DA6257;
-          height: 40vw;
           position: relative;
           text-align: center;
-          width: 40vw;
-        }
-
-        .tracker-tile .star {
-          height: 120px;
-          width: 120px;
+          height: 110px;
+          width: 110px;
           bottom: 10px;
         }
 
         .star:before, .star:after {
           background: #DA6257;
           content: "";
-          height: 40vw;
+          height: 110px;
           left: 0;
           position: absolute;
           top: 0;
-          width: 40vw;
-        }
-
-        .tracker-tile .star:before, .tracker-tile .star:after {
-          height: 120px;
-          width: 120px;
-
+          width: 110px;
         }
 
         .star:before {
@@ -59,8 +53,7 @@ function BooleanTracker(props) {
                  -o-transform: rotate(60deg);
         }
       `}</style>
-      <div className="star">
-      </div>
+      {starArea}
     </div>
   );
 }
