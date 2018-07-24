@@ -5,7 +5,6 @@ function BooleanTracker(props) {
     <div className="star"></div>
     : <div></div>
 
-
   function booleanChange() {
     props.trackerChange(!props.tracker.value, props.trackerId, props.tracker.type, props.date, props.defaultInfo);
   }

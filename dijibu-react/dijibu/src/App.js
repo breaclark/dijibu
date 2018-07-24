@@ -80,6 +80,14 @@ class App extends React.Component {
     const trackerRef = firebase.database().ref(`users/0/dates/${this.state.date}/trackers/${trackerId}/value`);
     if (trackerType === "boolean") {
       trackerRef.set(newInfo);
+    } else if (trackerType === "pie") {
+      trackerRef.set(newInfo);
+    } else if (trackerType === "count") {
+      trackerRef.set(newInfo);
+    } else if (trackerType === "heat") {
+      //this will need to be at a specific index
+    } else if (trackerType === "wordcloud") {
+      trackerRef.push(newInfo);
     }
     const ref = firebase.database().ref('users');
     let userData;
