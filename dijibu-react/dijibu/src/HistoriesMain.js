@@ -321,18 +321,20 @@ function HistoriesMain(props) {
 
   function makeHistories() {
     let histories = [];
-    let lastDay = props.dates[props.dates.length -1].trackers;
-    for(let i=0; i< lastDay.length; i++) {
-      if (lastDay[i].type === "pie") {
-        histories.push(makePieChart(lastDay[i].name));
-      } else if (lastDay[i].type === "wordcloud") {
-        histories.push(makeWordCloudChart(lastDay[i].name));
-      } else if (lastDay[i].type === "heat") {
-        histories.push(makeHeatChart(lastDay[i].name));
-      } else if (lastDay[i].type === "boolean") {
-        histories.push(makeBooleanChart(lastDay[i].name));
-      } else if (lastDay[i].type === "count") {
-        histories.push(makeCountChart(lastDay[i].name));
+    if(props.dates.length > 0) {
+      let lastDay = props.dates[props.dates.length -1].trackers;
+      for(let i=0; i< lastDay.length; i++) {
+        if (lastDay[i].type === "pie") {
+          histories.push(makePieChart(lastDay[i].name));
+        } else if (lastDay[i].type === "wordcloud") {
+          histories.push(makeWordCloudChart(lastDay[i].name));
+        } else if (lastDay[i].type === "heat") {
+          histories.push(makeHeatChart(lastDay[i].name));
+        } else if (lastDay[i].type === "boolean") {
+          histories.push(makeBooleanChart(lastDay[i].name));
+        } else if (lastDay[i].type === "count") {
+          histories.push(makeCountChart(lastDay[i].name));
+        }
       }
     }
     return histories;
