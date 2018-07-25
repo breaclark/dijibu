@@ -12,11 +12,7 @@ function Tracker(props) {
         .tracker-tile:hover {
           animation: shake 0.25s linear infinite;
         }
-
-
-
-
-
+        
         .count-tracker {
           color: white;
           background-color: #092E46;
