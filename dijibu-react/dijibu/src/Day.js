@@ -23,6 +23,7 @@ function Day(props) {
     <div>
       <style>{`
         h1 {
+          font-size: 5vw;
           margin-top: 10px;
         }
       `}</style>

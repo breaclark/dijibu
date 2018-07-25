@@ -17,7 +17,12 @@ function History(props) {
     layout={ props.history.layoutValues } />
   }
   return (
-    <div>
+    <div className="history">
+      <style>{`
+        .history h1 {
+          font-size: 5vw;
+        }
+      `}</style>
       {historyContent}
     <h1>{props.history.name} Tracker</h1>
     </div>

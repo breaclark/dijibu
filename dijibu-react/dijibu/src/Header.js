@@ -19,8 +19,9 @@ function Header() {
 
           .header h1 {
             color: #092E46;
-            font-size: 6vw;
+            font-size: 56pt;
             margin-left: 20px;
+            margin-top: 24px;
             z-index: 10;
           }
 

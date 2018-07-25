@@ -72,7 +72,7 @@ class Calendar extends React.Component {
           .month-forward, .month-back {
             color: #DA6257;
             display: inline;
-            font-size: 8vw;
+            font-size: 7vw;
           }
 
           .calendar-grid {
@@ -88,7 +88,7 @@ class Calendar extends React.Component {
 
           .day-marker {
             display: inline;
-            font-size: 8vw;
+            font-size: 5vw;
             text-align: center;
           }
         `}</style>
