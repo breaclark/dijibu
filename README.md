@@ -29,7 +29,7 @@ It is still in development.
 
 <details>
 <summary>React Component Structure Plan</summary>
-<img src="https://raw.githubusercontent.com/breaclark/dijibu/master/screenshots/React_Component_Structure.jpg">
+<img src="https://raw.githubusercontent.com/breaclark/dijibu/master/React_Component_Structure.jpg">
 </details>
 
 ### Screenshots of current version
