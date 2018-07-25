@@ -30,20 +30,17 @@ function WordCloudTracker(props) {
 
         .text-tracker input {
           height: 26px;
-          background-color: transparent;
-          border: 3px solid #DA6257;
-          color: white;
         }
 
         .text-tracker button {
           height: 33px;
-          background-color: transparent;
-          border: 3px solid #DA6257;
-          color: white;
           margin-left: 20px;
         }
 
         .text-tracker form input,button{
+          background-color: transparent;
+          border: 3px solid #f6d1b9;
+          color: white;
           font-size: 14pt;
           margin-top: 20px;
         }
