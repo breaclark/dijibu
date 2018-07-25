@@ -1,5 +1,6 @@
 import React from 'react';
 import History from './History';
+import dateFns from "date-fns";
 
 function HistoriesMain(props) {
 
@@ -216,6 +217,7 @@ function HistoriesMain(props) {
     options.forEach((key, i) => dict[key] = colorsOptions[i]);
     let labels = [];
     let colors = [];
+    let names = [];
     for(let i=dates.length - 1; i>=dates.length - 8; i--) {
       let labelsSingle = [];
       let colorsSingle = [];
@@ -229,6 +231,7 @@ function HistoriesMain(props) {
           return false;
         }).value;
         if (typeof possibleElement !== "undefined") {
+          names.push(dateFns.format(dates[i][1].date, 'MM/DD/YY'));
           for (let i=0; i<possibleElement.length; i++) {
             labelsSingle.push(possibleElement[i]);
             colorsSingle.push(dict[possibleElement[i]]);
@@ -239,6 +242,7 @@ function HistoriesMain(props) {
       colors.push(colorsSingle);
     }
     return {
+      names: names,
       labels: labels,
       colors: colors
     }
@@ -248,10 +252,12 @@ function HistoriesMain(props) {
     let parse = parseHeatData(name);
     let labels = parse.labels;
     let colors = parse.colors;
+    let names = parse.names;
     let dataValues = [];
     for (let i=0; i< labels.length; i++) {
       dataValues.push({
         values: [4.1666, 4.1666, 4.1666, 4.1666, 4.1666, 4.1666, 4.1666, 4.1666, 4.1666, 4.1666, 4.1666, 4.1666, 4.1666, 4.1666, 4.1666, 4.1666, 4.1666, 4.1666, 4.1666, 4.1666, 4.1666, 4.1666, 4.1666, 4.1666],
+        name: names[i],
         labels: labels[i],
         type: "pie",
         marker: {
