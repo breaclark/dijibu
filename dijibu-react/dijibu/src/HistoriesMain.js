@@ -309,12 +309,14 @@ function HistoriesMain(props) {
       if(i <  0) {
         break;
       } else {
+
         let possibleElement = dates[i][1].trackers.find(function(element) {
           if (element.type === "wordcloud" && element.name === name) {
             return element;
           }
           return false;
         }).value;
+        possibleElement = Object.values(possibleElement);
         if (typeof possibleElement !== "undefined") {
           wordbag = wordbag.concat(possibleElement);
         }
