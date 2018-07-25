@@ -5,9 +5,6 @@ import SignIn from './SignIn';
 import TrackersMain from './TrackersMain';
 import Calendar from './Calendar';
 import HistoriesMain from './HistoriesMain';
-import EditTrackers from './EditTrackers';
-import NewTracker from './NewTracker';
-import DeleteTracker from './DeleteTracker';
 import Error404 from './Error404';
 import { Switch, Route } from 'react-router-dom';
 import firebaseConfig from './firebaseConfig';
@@ -59,12 +56,12 @@ class App extends React.Component {
         { "name" : "Purchase",
           "type" : "wordcloud",
           "options" : [],
-          "value" : ["milk", "orange juice", "bread"]
+          "value" : []
         },
         { "name" : "Activity",
           "type" : "heat",
           "options" : ["N/A", "Sleeping", "Driving", "Cooking", "Exercising", "Watching TV", "Reading", "Shopping", "Working"],
-          "value" : ["Sleeping", "Sleeping", "N/A", "Sleeping", "N/A", "N/A", "Sleeping", "Sleeping", "Cooking", "Driving", "Working", "Working", "Working", "Working", "Working", "Working", "N/A", "N/A", "Driving", "Cooking", "Watching TV", "Watching TV", "Exercising", "Reading"]
+          "value" : ["Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Sleeping", "Cooking", "Driving", "Working", "Working", "Working", "Working", "Working", "Working", "Working", "Working", "Driving", "Cooking", "Watching TV", "Watching TV", "Exercising", "Reading"]
         },
         { "name" : "Exercise",
           "type" : "boolean",
@@ -74,9 +71,9 @@ class App extends React.Component {
         { "name" : "Money Spent",
           "type" : "count",
           "options" : [],
-          "value" : 33
+          "value" : 10
         }
-      ]});
+        ]});
     }
     const trackerRef = firebase.database().ref(`users/0/dates/${this.state.date}/trackers/${trackerId}/value`);
     if (trackerType === "boolean" || trackerType === "pie" || trackerType === "count" || trackerType === "heat") {
@@ -118,9 +115,6 @@ class App extends React.Component {
                   date={this.state.date}/> }/>
                 <Route exact path='/histories' render={()=><HistoriesMain
                   dates={this.state.user.dates} /> }/>
-              <Route exact path='/edit' render={()=><EditTrackers /> }/>
-              <Route exact path='/new' render={()=><NewTracker /> }/>
-              <Route exact path='/delete' render={()=><DeleteTracker /> }/>
               <Route component={Error404} />
             </Switch>
           </div>

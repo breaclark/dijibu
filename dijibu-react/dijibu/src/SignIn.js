@@ -5,6 +5,7 @@ function SignIn() {
     return (
       <div className="sign-in">
       <style>{`
+
         .form-input {
           background-color: #F6D1B9;
           border: 1px solid #092E46;
@@ -16,7 +17,7 @@ function SignIn() {
           margin-bottom: 10px;
           margin-left: 20px;
           padding-left: 6px;
-          width: 68%;
+          width: 71%;
         }
 
         .form-submit {
@@ -25,7 +26,7 @@ function SignIn() {
           font-size: 13pt;
           margin-left: 20px;
           margin-bottom: 10px;
-          width: 70.5%;
+          width: 71%;
         }
 
         .link {

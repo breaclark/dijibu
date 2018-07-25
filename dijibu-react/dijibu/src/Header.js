@@ -21,6 +21,7 @@ function Header() {
             color: #092E46;
             font-size: 6vw;
             margin-left: 20px;
+            z-index: 10;
           }
 
           .header .ham-line {
@@ -61,7 +62,7 @@ function Header() {
 
           .menu-back {
             background-color: #F6D1B9;
-            height: 240px;
+            height: 160px;
             left: 0px;
             position: fixed;
             top: -240px;
@@ -92,7 +93,6 @@ function Header() {
             <div className="menu-back">
               <div className="menu">
                 <Link className="link" to="/calendar">Calendar</Link>
-                <Link className="link" to="/edit">Edit Trackers</Link>
                 <Link className="link" to="/histories">Histories</Link>
                 <Link className="link" to="/">Sign In</Link>
               </div>

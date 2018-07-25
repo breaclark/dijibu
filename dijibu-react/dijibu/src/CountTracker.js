@@ -25,11 +25,6 @@ function CountTracker(props) {
           align-items: center;
         }
 
-        .count-tracker label {
-          font-size: 20vw;
-          margin-left: 40px;
-        }
-
         .count-tracker.tracker-tile label{
           font-size: 1000%;
           margin-left: 20px;
@@ -39,10 +34,10 @@ function CountTracker(props) {
           border: none;
           background-color: inherit;
           color: white;
-          font-size: 20vw;
+          font-size: 1000%;
           min-height: 100px;
           min-width: 300px;
-          width: 40%;
+          width: 60%;
           margin-left: 20px;
         }
 
@@ -50,10 +45,6 @@ function CountTracker(props) {
           width: 100%;
         }
 
-        .count-tracker.tracker-tile .count-select-box{
-          font-size: 1000%;
-          width: 60%;
-        }
       `}</style>
     <input type="number" className="count-select-box" onChange={countChange} value={inputValue} ref={(input) => {inputValue = input;}}/>
     </div>
