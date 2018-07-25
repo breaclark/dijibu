@@ -30,7 +30,7 @@ class Calendar extends React.Component {
     } else {
       let dayDate = dateFns.format(dateFns.startOfDay(new Date(dateFns.getYear(this.state.date), dateFns.getMonth(this.state.date), dayNum)), 'MM-DD-YY');
       return(
-        <Day onDateClick = {this.props.onDateClick} wholeDate={this.state.date} dates={this.state.dates} key={dayDate} id={dayDate} date={dayNum} />
+        <Day onDateClick = {this.props.onDateClick} key={dayDate} id={dayDate} date={dayNum} />
       );
     }
   }
