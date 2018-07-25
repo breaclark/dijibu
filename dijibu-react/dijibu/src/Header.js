@@ -12,6 +12,9 @@ function Header() {
             height: 140px;
             justify-content: space-between;
             width: 100%;
+            position: fixed;
+            z-index: 5;
+            top: 0;
           }
 
           .header h1 {

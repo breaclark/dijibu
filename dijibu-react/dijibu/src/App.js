@@ -99,24 +99,31 @@ class App extends React.Component {
     if (this.state.user) {
       return (
         <div className="App">
+          <style>{`
+            .switch-box {
+              margin-top: 160px;
+            }
+          `}</style>
           <Header />
-          <Switch>
-            <Route exact path='/signIn' render={()=><SignIn />}/>
-            <Route exact path='/trackers' render={()=><TrackersMain
-                onTrackerChange = {this.handleTrackerChange}
-                dates={this.state.user.dates}
-                date={this.state.date}/>}/>
-              <Route exact path='/' render={()=><Calendar
-                onDateClick={this.handleDateChange}
-                dates={this.state.user.dates}
-                date={this.state.date}/> }/>
-              <Route exact path='/histories' render={()=><HistoriesMain
-                dates={this.state.user.dates} /> }/>
-            <Route exact path='/edit' render={()=><EditTrackers /> }/>
-            <Route exact path='/new' render={()=><NewTracker /> }/>
-            <Route exact path='/delete' render={()=><DeleteTracker /> }/>
-            <Route component={Error404} />
-          </Switch>
+          <div className="switch-box">
+            <Switch>
+              <Route exact path='/signIn' render={()=><SignIn />}/>
+              <Route exact path='/trackers' render={()=><TrackersMain
+                  onTrackerChange = {this.handleTrackerChange}
+                  dates={this.state.user.dates}
+                  date={this.state.date}/>}/>
+                <Route exact path='/' render={()=><Calendar
+                  onDateClick={this.handleDateChange}
+                  dates={this.state.user.dates}
+                  date={this.state.date}/> }/>
+                <Route exact path='/histories' render={()=><HistoriesMain
+                  dates={this.state.user.dates} /> }/>
+              <Route exact path='/edit' render={()=><EditTrackers /> }/>
+              <Route exact path='/new' render={()=><NewTracker /> }/>
+              <Route exact path='/delete' render={()=><DeleteTracker /> }/>
+              <Route component={Error404} />
+            </Switch>
+          </div>
         </div>
       );
     } else {
