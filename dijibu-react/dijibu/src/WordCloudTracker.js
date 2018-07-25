@@ -29,14 +29,14 @@ function WordCloudTracker(props) {
         }
 
         .text-tracker input {
-          height: 20px;
+          height: 26px;
           background-color: transparent;
           border: 3px solid #DA6257;
           color: white;
         }
 
         .text-tracker button {
-          height: 27px;
+          height: 33px;
           background-color: transparent;
           border: 3px solid #DA6257;
           color: white;
@@ -44,6 +44,7 @@ function WordCloudTracker(props) {
         }
 
         .text-tracker form input,button{
+          font-size: 14pt;
           margin-top: 20px;
         }
       `}</style>
