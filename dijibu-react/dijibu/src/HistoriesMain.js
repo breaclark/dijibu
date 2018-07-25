@@ -88,7 +88,7 @@ function HistoriesMain(props) {
           if (possibleElement) {
             colorResult = "#F6D1B9";
           }
-          labels.push(dates[i][1].date);
+          labels.push(dateFns.format(dates[i][1].date, 'MM/DD/YY'));
           colors.push(colorResult);
         }
       }
@@ -146,7 +146,7 @@ function HistoriesMain(props) {
           return false;
         }).value;
         if (typeof possibleElement !== "undefined") {
-          theta.push(dates[i][1].date);
+          theta.push(dateFns.format(dates[i][1].date, 'MM/DD/YY'));
           r.push(possibleElement);
         }
       }
