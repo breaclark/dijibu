@@ -12,6 +12,7 @@ import Error404 from './Error404';
 import { Switch, Route } from 'react-router-dom';
 import firebaseConfig from './firebaseConfig';
 import firebase from 'firebase';
+import dateFns from "date-fns";
 
 class App extends React.Component {
 
@@ -20,7 +21,7 @@ class App extends React.Component {
     this.state = {
       user: null,
       dateId: null,
-      date: new Date(),
+      date: dateFns.startOfDay(new Date()),
     };
     this.handleDateChange = this.handleDateChange.bind(this);
     this.handleTrackerChange = this.handleTrackerChange.bind(this);
