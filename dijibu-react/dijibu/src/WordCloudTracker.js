@@ -5,7 +5,8 @@ function WordCloudTracker(props) {
 
   let inputValue = null;
 
-  function wordCloudChange() {
+  function wordCloudChange(event) {
+    event.preventDefault();
     props.trackerChange(inputValue.value, props.trackerId, props.tracker.type, props.date, props.defaultInfo);
     inputValue.value = '';
   }
