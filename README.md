@@ -2,10 +2,9 @@
 
 ### By **Brea Clark**
 
-#### A digital bullet journal with different kinds of habit trackers
+#### See it live [here](http://breaclark.github.io/dijibu)   
 
-An app that mimics the fun of analog habit trackers with the convenience of a web app.
-It is still in development.
+A digital bullet journal that mimics the fun of analog habit trackers with the convenience of a web app. It is still in development.
 
 ### Plans
 
