@@ -1,6 +1,7 @@
 import React from 'react';
 import Day from './Day';
 import dateFns from "date-fns";
+import { v4 } from 'uuid';
 
 class Calendar extends React.Component {
   constructor(props) {
@@ -22,10 +23,16 @@ class Calendar extends React.Component {
   }
 
   renderSingleDay(dayNum) {
-    let dayDate = dateFns.startOfDay(new Date(dateFns.getYear(this.state.date), dateFns.getMonth(this.state.date), dayNum));
-    return(
-      <Day onDateClick = {this.props.onDateClick} wholeDate={this.state.date} dates={this.state.dates} key={dayDate} id={dayDate} date={dayNum} />
-    );
+    if (dayNum === "") {
+      return (
+        <div key={v4()}></div>
+      );
+    } else {
+      let dayDate = dateFns.format(dateFns.startOfDay(new Date(dateFns.getYear(this.state.date), dateFns.getMonth(this.state.date), dayNum)), 'MM-DD-YY');
+      return(
+        <Day onDateClick = {this.props.onDateClick} wholeDate={this.state.date} dates={this.state.dates} key={dayDate} id={dayDate} date={dayNum} />
+      );
+    }
   }
 
   renderDays(){

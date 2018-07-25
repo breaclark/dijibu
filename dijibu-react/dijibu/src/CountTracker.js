@@ -43,6 +43,7 @@ function CountTracker(props) {
           min-height: 100px;
           min-width: 300px;
           width: 40%;
+          margin-left: 20px;
         }
 
         .count-tracker.tracker-tile a .count-select-box{

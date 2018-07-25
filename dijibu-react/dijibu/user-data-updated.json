@@ -1,0 +1,226 @@
+{
+  "users" : [ {
+    "dates" : {
+      "07-19-18" : {
+        "date" : "07-19-18",
+        "trackers" : [ {
+          "name" : "Mood",
+          "options" : [ "Happy", "Frustrated", "Moody", "Sad", "Thoughtful" ],
+          "type" : "pie",
+          "value" : "Moody"
+        }, {
+          "name" : "Purchase",
+          "type" : "wordcloud",
+          "value" : {
+            "0" : "milk",
+            "1" : "orange juice",
+            "2" : "bread",
+            "-LIHj_QAZOK89et_jAlD" : "floss"
+          }
+        }, {
+          "name" : "Activity",
+          "options" : [ "N/A", "Sleeping", "Driving", "Cooking", "Exercising", "Watching TV", "Reading", "Shopping", "Working" ],
+          "type" : "heat",
+          "value" : [ "Driving", "Sleeping", "Sleeping", "Driving", "Sleeping", "N/A", "Sleeping", "Driving", "Exercising", "Exercising", "Working", "Driving", "Working", "Sleeping", "Working", "Driving", "Driving", "Sleeping", "Cooking", "Exercising", "Shopping", "Working", "Reading", "Sleeping" ]
+        }, {
+          "name" : "Exercise",
+          "type" : "boolean",
+          "value" : true
+        }, {
+          "name" : "Money Spent",
+          "type" : "count",
+          "value" : "14"
+        } ]
+      },
+      "07-20-18" : {
+        "date" : "07-20-18",
+        "trackers" : [ {
+          "name" : "Mood",
+          "options" : [ "Happy", "Frustrated", "Moody", "Sad", "Thoughtful" ],
+          "type" : "pie",
+          "value" : "Sad"
+        }, {
+          "name" : "Purchase",
+          "type" : "wordcloud",
+          "value" : {
+            "0" : "milk",
+            "1" : "orange juice",
+            "2" : "bread",
+            "-LIHjwfcQPp1SJMt4WW6" : "cake",
+            "-LIHjxTjb5IxSK4cLMQD" : "toilet paper"
+          }
+        }, {
+          "name" : "Activity",
+          "options" : [ "N/A", "Sleeping", "Driving", "Cooking", "Exercising", "Watching TV", "Reading", "Shopping", "Working" ],
+          "type" : "heat",
+          "value" : [ "Sleeping", "Sleeping", "N/A", "Sleeping", "N/A", "N/A", "Sleeping", "Sleeping", "Cooking", "Driving", "Working", "Working", "Working", "Working", "Working", "Working", "N/A", "N/A", "Driving", "Cooking", "Watching TV", "Watching TV", "Exercising", "Reading" ]
+        }, {
+          "name" : "Exercise",
+          "type" : "boolean",
+          "value" : false
+        }, {
+          "name" : "Money Spent",
+          "type" : "count",
+          "value" : "2"
+        } ]
+      },
+      "07-21-18" : {
+        "date" : "07-21-18",
+        "trackers" : [ {
+          "name" : "Mood",
+          "options" : [ "Happy", "Frustrated", "Moody", "Sad", "Thoughtful" ],
+          "type" : "pie",
+          "value" : "Thoughtful"
+        }, {
+          "name" : "Purchase",
+          "type" : "wordcloud",
+          "value" : {
+            "0" : "milk",
+            "1" : "orange juice",
+            "2" : "bread",
+            "-LIHk046FU_Ye0pn38lT" : "nail polish"
+          }
+        }, {
+          "name" : "Activity",
+          "options" : [ "N/A", "Sleeping", "Driving", "Cooking", "Exercising", "Watching TV", "Reading", "Shopping", "Working" ],
+          "type" : "heat",
+          "value" : [ "Driving", "Driving", "Exercising", "Cooking", "Sleeping", "N/A", "Driving", "Driving", "Watching TV", "Driving", "Sleeping", "Working", "Sleeping", "N/A", "Working", "Driving", "Driving", "Sleeping", "Driving", "Cooking", "Reading", "Watching TV", "Watching TV", "N/A" ]
+        }, {
+          "name" : "Exercise",
+          "type" : "boolean",
+          "value" : true
+        }, {
+          "name" : "Money Spent",
+          "type" : "count",
+          "value" : "56"
+        } ]
+      },
+      "07-22-18" : {
+        "date" : "07-22-18",
+        "trackers" : [ {
+          "name" : "Mood",
+          "options" : [ "Happy", "Frustrated", "Moody", "Sad", "Thoughtful" ],
+          "type" : "pie",
+          "value" : "Happy"
+        }, {
+          "name" : "Purchase",
+          "type" : "wordcloud",
+          "value" : {
+            "0" : "milk",
+            "1" : "orange juice",
+            "2" : "bread",
+            "-LIHkCIOYYlB3mpQMmO8" : "gift"
+          }
+        }, {
+          "name" : "Activity",
+          "options" : [ "N/A", "Sleeping", "Driving", "Cooking", "Exercising", "Watching TV", "Reading", "Shopping", "Working" ],
+          "type" : "heat",
+          "value" : [ "Driving", "Sleeping", "Cooking", "Sleeping", "Driving", "N/A", "Exercising", "Sleeping", "Cooking", "Driving", "Sleeping", "Working", "Sleeping", "N/A", "Working", "Working", "Cooking", "N/A", "Reading", "Cooking", "Reading", "Sleeping", "Watching TV", "N/A" ]
+        }, {
+          "name" : "Exercise",
+          "type" : "boolean",
+          "value" : true
+        }, {
+          "name" : "Money Spent",
+          "type" : "count",
+          "value" : "120"
+        } ]
+      },
+      "07-23-18" : {
+        "date" : "07-23-18",
+        "trackers" : [ {
+          "name" : "Mood",
+          "options" : [ "Happy", "Frustrated", "Moody", "Sad", "Thoughtful" ],
+          "type" : "pie",
+          "value" : "Sad"
+        }, {
+          "name" : "Purchase",
+          "type" : "wordcloud",
+          "value" : {
+            "0" : "milk",
+            "1" : "orange juice",
+            "2" : "bread",
+            "-LIHkJtY0whWI2boa3YN" : "nail polish"
+          }
+        }, {
+          "name" : "Activity",
+          "options" : [ "N/A", "Sleeping", "Driving", "Cooking", "Exercising", "Watching TV", "Reading", "Shopping", "Working" ],
+          "type" : "heat",
+          "value" : [ "Sleeping", "Driving", "N/A", "Driving", "Cooking", "Cooking", "Sleeping", "Cooking", "Cooking", "Watching TV", "N/A", "Reading", "N/A", "Working", "Working", "Shopping", "Driving", "Sleeping", "Exercising", "Working", "N/A", "Watching TV", "Shopping", "Shopping" ]
+        }, {
+          "name" : "Exercise",
+          "type" : "boolean",
+          "value" : false
+        }, {
+          "name" : "Money Spent",
+          "type" : "count",
+          "value" : "28"
+        } ]
+      },
+      "07-24-18" : {
+        "date" : "07-24-18",
+        "trackers" : [ {
+          "name" : "Mood",
+          "options" : [ "Happy", "Frustrated", "Moody", "Sad", "Thoughtful" ],
+          "type" : "pie",
+          "value" : "Sad"
+        }, {
+          "name" : "Purchase",
+          "type" : "wordcloud",
+          "value" : {
+            "0" : "milk",
+            "1" : "orange juice",
+            "2" : "bread",
+            "-LIHkUCK6WLMLZssIfvL" : "cake"
+          }
+        }, {
+          "name" : "Activity",
+          "options" : [ "N/A", "Sleeping", "Driving", "Cooking", "Exercising", "Watching TV", "Reading", "Shopping", "Working" ],
+          "type" : "heat",
+          "value" : [ "Exercising", "Driving", "N/A", "Driving", "Sleeping", "N/A", "Exercising", "Sleeping", "Exercising", "Watching TV", "N/A", "Working", "Sleeping", "N/A", "Working", "N/A", "Cooking", "N/A", "Driving", "Watching TV", "Reading", "Shopping", "Watching TV", "Shopping" ]
+        }, {
+          "name" : "Exercise",
+          "type" : "boolean",
+          "value" : true
+        }, {
+          "name" : "Money Spent",
+          "type" : "count",
+          "value" : "32"
+        } ]
+      },
+      "07-25-18" : {
+        "date" : "07-25-18",
+        "trackers" : [ {
+          "name" : "Mood",
+          "options" : [ "Happy", "Frustrated", "Moody", "Sad", "Thoughtful" ],
+          "type" : "pie",
+          "value" : "Thoughtful"
+        }, {
+          "name" : "Purchase",
+          "type" : "wordcloud",
+          "value" : {
+            "0" : "milk",
+            "1" : "orange juice",
+            "2" : "bread",
+            "-LIHkcrf_IQxwWiboiGz" : "toilet paper"
+          }
+        }, {
+          "name" : "Activity",
+          "options" : [ "N/A", "Sleeping", "Driving", "Cooking", "Exercising", "Watching TV", "Reading", "Shopping", "Working" ],
+          "type" : "heat",
+          "value" : [ "Driving", "Sleeping", "N/A", "Driving", "Sleeping", "N/A", "Sleeping", "Driving", "Cooking", "Driving", "N/A", "Working", "N/A", "N/A", "Sleeping", "Working", "Driving", "Sleeping", "Cooking", "Cooking", "N/A", "Reading", "Watching TV", "Shopping" ]
+        }, {
+          "name" : "Exercise",
+          "type" : "boolean",
+          "value" : true
+        }, {
+          "name" : "Money Spent",
+          "type" : "count",
+          "value" : "93"
+        } ]
+      }
+    },
+    "name" : "BreaClark",
+    "password" : "password"
+  } ]
+}

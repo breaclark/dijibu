@@ -21,7 +21,7 @@ class App extends React.Component {
     this.state = {
       user: null,
       dateId: null,
-      date: dateFns.startOfDay(new Date()),
+      date: dateFns.format(dateFns.startOfDay(new Date()), 'MM-DD-YY')
     };
     this.handleDateChange = this.handleDateChange.bind(this);
     this.handleTrackerChange = this.handleTrackerChange.bind(this);
@@ -107,12 +107,12 @@ class App extends React.Component {
           <Header />
           <div className="switch-box">
             <Switch>
-              <Route exact path='/signIn' render={()=><SignIn />}/>
+              <Route exact path='/' render={()=><SignIn />}/>
               <Route exact path='/trackers' render={()=><TrackersMain
                   onTrackerChange = {this.handleTrackerChange}
                   dates={this.state.user.dates}
                   date={this.state.date}/>}/>
-                <Route exact path='/' render={()=><Calendar
+                <Route exact path='/calendar' render={()=><Calendar
                   onDateClick={this.handleDateChange}
                   dates={this.state.user.dates}
                   date={this.state.date}/> }/>

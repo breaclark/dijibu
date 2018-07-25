@@ -37,7 +37,7 @@ function SignIn() {
         <div className="form">
           <input className="form-input" type="text" name="username" placeholder="Username" />
           <input className="form-input" type="text" name="password" placeholder="Password" />
-          <button className="form-submit"><Link className="link" to="/">Sign Me In</Link></button>
+          <button className="form-submit"><Link className="link" to="/calendar">Sign Me In</Link></button>
         </div>
       </div>
     );

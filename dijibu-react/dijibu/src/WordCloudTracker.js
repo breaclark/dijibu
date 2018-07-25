@@ -42,6 +42,10 @@ function WordCloudTracker(props) {
           color: white;
           margin-left: 20px;
         }
+
+        .text-tracker form input,button{
+          margin-top: 20px;
+        }
       `}</style>
     {Object.keys(props.tracker.value).map(function(lineValue){
       return (

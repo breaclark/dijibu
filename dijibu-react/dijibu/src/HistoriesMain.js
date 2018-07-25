@@ -18,7 +18,7 @@ function HistoriesMain(props) {
     options.forEach((key, i) => dict[key] = colorsOptions[i]);
     let labels = [];
     let colors = [];
-    for(let i=dates.length - 1; i>=dates.length - 8; i--) {
+    for(let i=dates.length - 1; i>=dates.length - 7; i--) {
       if(i <  0) {
         break;
       } else {
@@ -73,7 +73,7 @@ function HistoriesMain(props) {
   function parseBooleanData(name) {
     let labels = [];
     let colors = [];
-    for(let i=dates.length - 1; i>=dates.length - 8; i--) {
+    for(let i=dates.length - 1; i>=dates.length - 7; i--) {
       if(i <  0) {
         break;
       } else {
@@ -135,7 +135,7 @@ function HistoriesMain(props) {
   function parseCountData(name) {
     let theta = [];
     let r = [];
-    for(let i=dates.length - 1; i>=dates.length - 8; i--) {
+    for(let i=dates.length - 1; i>=dates.length - 7; i--) {
       if(i <  0) {
         break;
       } else {
@@ -218,7 +218,7 @@ function HistoriesMain(props) {
     let labels = [];
     let colors = [];
     let names = [];
-    for(let i=dates.length - 1; i>=dates.length - 8; i--) {
+    for(let i=dates.length - 1; i>=dates.length - 7; i--) {
       let labelsSingle = [];
       let colorsSingle = [];
       if(i <  0) {
@@ -305,7 +305,7 @@ function HistoriesMain(props) {
 
   function parseWordCloudData(name) {
     let wordbag = [];
-    for(let i=dates.length - 1; i>=dates.length - 8; i--) {
+    for(let i=dates.length - 1; i>=dates.length - 7; i--) {
       if(i <  0) {
         break;
       } else {
