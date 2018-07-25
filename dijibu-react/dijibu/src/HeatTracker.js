@@ -2,7 +2,6 @@ import React from 'react';
 import HeatTrackerTile from './HeatTrackerTile';
 
 function HeatTracker(props) {
-
   function heatChange(newHeatTiles) {
     props.trackerChange(newHeatTiles, props.trackerId, props.tracker.type, props.date, props.defaultInfo);
   }

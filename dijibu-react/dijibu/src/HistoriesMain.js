@@ -241,7 +241,6 @@ function HistoriesMain(props) {
       labels.push(labelsSingle);
       colors.push(colorsSingle);
     }
-    console.log(labels);
     return {
       names: names,
       labels: labels,

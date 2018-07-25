@@ -63,8 +63,8 @@ class App extends React.Component {
         },
         { "name" : "Activity",
           "type" : "heat",
-          "options" : ["", "Sleeping", "Driving", "Cooking", "Exercising", "Watching TV", "Reading", "Shopping", "Working"],
-          "value" : ["Sleeping", "Sleeping", "", "Sleeping", "", "", "Sleeping", "Sleeping", "Cooking", "Driving", "Working", "Working", "Working", "Working", "Working", "Working", "", "", "Driving", "Cooking", "Watching TV", "Watching TV", "Exercising", "Reading"]
+          "options" : ["N/A", "Sleeping", "Driving", "Cooking", "Exercising", "Watching TV", "Reading", "Shopping", "Working"],
+          "value" : ["Sleeping", "Sleeping", "N/A", "Sleeping", "N/A", "N/A", "Sleeping", "Sleeping", "Cooking", "Driving", "Working", "Working", "Working", "Working", "Working", "Working", "N/A", "N/A", "Driving", "Cooking", "Watching TV", "Watching TV", "Exercising", "Reading"]
         },
         { "name" : "Exercise",
           "type" : "boolean",
